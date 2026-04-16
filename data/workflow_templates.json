@@ -1,0 +1,74 @@
+[
+  {
+    "template_id": "T-intake",
+    "stage": "intake",
+    "required_docs": [
+      "indication_of_interest"
+    ],
+    "required_fields": [],
+    "sla_hours": 24
+  },
+  {
+    "template_id": "T-kyc_review",
+    "stage": "kyc_review",
+    "required_docs": [
+      "kyc_form",
+      "accreditation_letter",
+      "w8_w9_form"
+    ],
+    "required_fields": [],
+    "sla_hours": 48
+  },
+  {
+    "template_id": "T-docs_pending",
+    "stage": "docs_pending",
+    "required_docs": [
+      "term_sheet",
+      "subscription_agreement_draft"
+    ],
+    "required_fields": [
+      "buyer_legal_name",
+      "seller_legal_name",
+      "share_count",
+      "price_per_share"
+    ],
+    "sla_hours": 72
+  },
+  {
+    "template_id": "T-rofr_review",
+    "stage": "rofr_review",
+    "required_docs": [
+      "rofr_notice",
+      "seller_consent"
+    ],
+    "required_fields": [],
+    "sla_hours": 48
+  },
+  {
+    "template_id": "T-signature",
+    "stage": "signature",
+    "required_docs": [
+      "subscription_agreement",
+      "buyer_signature_page",
+      "seller_signature_page"
+    ],
+    "required_fields": [
+      "buyer_legal_name",
+      "seller_legal_name",
+      "share_count",
+      "price_per_share"
+    ],
+    "sla_hours": 48
+  },
+  {
+    "template_id": "T-settlement",
+    "stage": "settlement",
+    "required_docs": [
+      "wire_instructions",
+      "tax_form",
+      "settlement_confirmation"
+    ],
+    "required_fields": [],
+    "sla_hours": 72
+  }
+]

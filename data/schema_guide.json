@@ -1,0 +1,93 @@
+{
+  "deals.json": {
+    "description": "Top-level record for each secondary transaction deal.",
+    "key_fields": [
+      "deal_id",
+      "company_name",
+      "buyer_id",
+      "seller_id",
+      "current_stage",
+      "share_count",
+      "price_per_share",
+      "deadline_at",
+      "rofr_required",
+      "failure_modes"
+    ]
+  },
+  "counterparties.json": {
+    "description": "Buyer and seller entities referenced by deals.",
+    "key_fields": [
+      "counterparty_id",
+      "name",
+      "type",
+      "entity_type",
+      "accredited_investor_status",
+      "kyc_status",
+      "jurisdiction"
+    ]
+  },
+  "stage_events.json": {
+    "description": "Historical stage transitions for each deal; useful for timelines and SLA checks.",
+    "key_fields": [
+      "event_id",
+      "deal_id",
+      "from_stage",
+      "to_stage",
+      "changed_at",
+      "changed_by"
+    ]
+  },
+  "workflow_templates.json": {
+    "description": "Stage-level operational requirements and SLA definitions.",
+    "key_fields": [
+      "template_id",
+      "stage",
+      "required_docs",
+      "required_fields",
+      "sla_hours"
+    ]
+  },
+  "documents.json": {
+    "description": "Uploaded deal documents with extracted structured fields.",
+    "key_fields": [
+      "document_id",
+      "deal_id",
+      "doc_type",
+      "stage",
+      "status",
+      "extracted_fields",
+      "source_file"
+    ]
+  },
+  "communications.json": {
+    "description": "Synthetic email/thread records for unstructured blocker extraction.",
+    "key_fields": [
+      "message_id",
+      "deal_id",
+      "sender_role",
+      "timestamp",
+      "subject",
+      "body"
+    ]
+  },
+  "notes.json": {
+    "description": "Internal operations/compliance notes for additional unstructured context.",
+    "key_fields": [
+      "note_id",
+      "deal_id",
+      "author_role",
+      "created_at",
+      "body"
+    ]
+  },
+  "risk_labels.json": {
+    "description": "Optional synthetic supervision labels for future ML experiments.",
+    "key_fields": [
+      "deal_id",
+      "delay_risk",
+      "compliance_risk",
+      "settlement_risk",
+      "primary_issue"
+    ]
+  }
+}

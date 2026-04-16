@@ -1,0 +1,527 @@
+[
+  {
+    "deal_id": "D-1001",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "overdue_stage_sla"
+  },
+  {
+    "deal_id": "D-1002",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "medium",
+    "primary_issue": "share_count_mismatch"
+  },
+  {
+    "deal_id": "D-1003",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "overdue_stage_sla"
+  },
+  {
+    "deal_id": "D-1004",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1005",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "share_count_mismatch"
+  },
+  {
+    "deal_id": "D-1006",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "stalled_counterparty_response"
+  },
+  {
+    "deal_id": "D-1007",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "medium",
+    "primary_issue": "share_count_mismatch"
+  },
+  {
+    "deal_id": "D-1008",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "rofr_deadline_approaching"
+  },
+  {
+    "deal_id": "D-1009",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1010",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "medium",
+    "primary_issue": "incomplete_kyc"
+  },
+  {
+    "deal_id": "D-1011",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1012",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1013",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1014",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "stalled_counterparty_response"
+  },
+  {
+    "deal_id": "D-1015",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "missing_required_doc"
+  },
+  {
+    "deal_id": "D-1016",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "rofr_deadline_approaching"
+  },
+  {
+    "deal_id": "D-1017",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1018",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1019",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "overdue_stage_sla"
+  },
+  {
+    "deal_id": "D-1020",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "missing_required_doc"
+  },
+  {
+    "deal_id": "D-1021",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1022",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1023",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1024",
+    "delay_risk": "low",
+    "compliance_risk": "high",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1025",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "stalled_counterparty_response"
+  },
+  {
+    "deal_id": "D-1026",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "share_count_mismatch"
+  },
+  {
+    "deal_id": "D-1027",
+    "delay_risk": "low",
+    "compliance_risk": "high",
+    "settlement_risk": "low",
+    "primary_issue": "incomplete_kyc"
+  },
+  {
+    "deal_id": "D-1028",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "stalled_counterparty_response"
+  },
+  {
+    "deal_id": "D-1029",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1030",
+    "delay_risk": "high",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "overdue_stage_sla"
+  },
+  {
+    "deal_id": "D-1031",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1032",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1033",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1034",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1035",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1036",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "share_count_mismatch"
+  },
+  {
+    "deal_id": "D-1037",
+    "delay_risk": "medium",
+    "compliance_risk": "medium",
+    "settlement_risk": "low",
+    "primary_issue": "stalled_counterparty_response"
+  },
+  {
+    "deal_id": "D-1038",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1039",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "overdue_stage_sla"
+  },
+  {
+    "deal_id": "D-1040",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1041",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "low",
+    "primary_issue": "entity_name_mismatch"
+  },
+  {
+    "deal_id": "D-1042",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1043",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "stalled_counterparty_response"
+  },
+  {
+    "deal_id": "D-1044",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "low",
+    "primary_issue": "entity_name_mismatch"
+  },
+  {
+    "deal_id": "D-1045",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "low",
+    "primary_issue": "incomplete_kyc"
+  },
+  {
+    "deal_id": "D-1046",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1047",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1048",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "stalled_counterparty_response"
+  },
+  {
+    "deal_id": "D-1049",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "low",
+    "primary_issue": "entity_name_mismatch"
+  },
+  {
+    "deal_id": "D-1050",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "medium",
+    "primary_issue": "share_count_mismatch"
+  },
+  {
+    "deal_id": "D-1051",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "medium",
+    "primary_issue": "entity_name_mismatch"
+  },
+  {
+    "deal_id": "D-1052",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1053",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1054",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "overdue_stage_sla"
+  },
+  {
+    "deal_id": "D-1055",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "low",
+    "primary_issue": "incomplete_kyc"
+  },
+  {
+    "deal_id": "D-1056",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "missing_required_doc"
+  },
+  {
+    "deal_id": "D-1057",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "stalled_counterparty_response"
+  },
+  {
+    "deal_id": "D-1058",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "missing_signature"
+  },
+  {
+    "deal_id": "D-1059",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "medium",
+    "primary_issue": "entity_name_mismatch"
+  },
+  {
+    "deal_id": "D-1060",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "missing_required_doc"
+  },
+  {
+    "deal_id": "D-1061",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "overdue_stage_sla"
+  },
+  {
+    "deal_id": "D-1062",
+    "delay_risk": "high",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "stalled_counterparty_response"
+  },
+  {
+    "deal_id": "D-1063",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "low",
+    "primary_issue": "entity_name_mismatch"
+  },
+  {
+    "deal_id": "D-1064",
+    "delay_risk": "medium",
+    "compliance_risk": "high",
+    "settlement_risk": "low",
+    "primary_issue": "incomplete_kyc"
+  },
+  {
+    "deal_id": "D-1065",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "missing_required_doc"
+  },
+  {
+    "deal_id": "D-1066",
+    "delay_risk": "low",
+    "compliance_risk": "medium",
+    "settlement_risk": "medium",
+    "primary_issue": "share_count_mismatch"
+  },
+  {
+    "deal_id": "D-1067",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1068",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1069",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "missing_signature"
+  },
+  {
+    "deal_id": "D-1070",
+    "delay_risk": "high",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "overdue_stage_sla"
+  },
+  {
+    "deal_id": "D-1071",
+    "delay_risk": "high",
+    "compliance_risk": "medium",
+    "settlement_risk": "low",
+    "primary_issue": "entity_name_mismatch"
+  },
+  {
+    "deal_id": "D-1072",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "overdue_stage_sla"
+  },
+  {
+    "deal_id": "D-1073",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "conflicting_email_signal"
+  },
+  {
+    "deal_id": "D-1074",
+    "delay_risk": "low",
+    "compliance_risk": "low",
+    "settlement_risk": "low",
+    "primary_issue": "none"
+  },
+  {
+    "deal_id": "D-1075",
+    "delay_risk": "medium",
+    "compliance_risk": "low",
+    "settlement_risk": "medium",
+    "primary_issue": "missing_required_doc"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "counterparty_id": "BUY-001",
+    "name": "Northlake Ventures",
+    "type": "buyer",
+    "entity_type": "fund",
+    "accredited_investor_status": "verified",
+    "kyc_status": "pending",
+    "email": "northlakeventures@example.com",
+    "jurisdiction": "Canada"
+  },
+  {
+    "counterparty_id": "BUY-002",
+    "name": "Maple Ridge Capital",
+    "type": "buyer",
+    "entity_type": "llc",
+    "accredited_investor_status": "verified",
+    "kyc_status": "pending",
+    "email": "mapleridgecapital@example.com",
+    "jurisdiction": "UK"
+  },
+  {
+    "counterparty_id": "BUY-003",
+    "name": "Beacon Growth Partners",
+    "type": "buyer",
+    "entity_type": "fund",
+    "accredited_investor_status": "pending",
+    "kyc_status": "pending",
+    "email": "beacongrowthpartners@example.com",
+    "jurisdiction": "US"
+  },
+  {
+    "counterparty_id": "BUY-004",
+    "name": "BlueHarbor Fund",
+    "type": "buyer",
+    "entity_type": "llc",
+    "accredited_investor_status": "verified",
+    "kyc_status": "pending",
+    "email": "blueharborfund@example.com",
+    "jurisdiction": "US"
+  },
+  {
+    "counterparty_id": "BUY-005",
+    "name": "Orchid Peak Investments",
+    "type": "buyer",
+    "entity_type": "spv",
+    "accredited_investor_status": "verified",
+    "kyc_status": "pending",
+    "email": "orchidpeakinvestments@example.com",
+    "jurisdiction": "UK"
+  },
+  {
+    "counterparty_id": "BUY-006",
+    "name": "Cascade Equity",
+    "type": "buyer",
+    "entity_type": "individual",
+    "accredited_investor_status": "verified",
+    "kyc_status": "complete",
+    "email": "cascadeequity@example.com",
+    "jurisdiction": "Cayman"
+  },
+  {
+    "counterparty_id": "BUY-007",
+    "name": "Pacific Horizon Capital",
+    "type": "buyer",
+    "entity_type": "fund",
+    "accredited_investor_status": "verified",
+    "kyc_status": "pending",
+    "email": "pacifichorizoncapital@example.com",
+    "jurisdiction": "Cayman"
+  },
+  {
+    "counterparty_id": "BUY-008",
+    "name": "Summit View Partners",
+    "type": "buyer",
+    "entity_type": "trust",
+    "accredited_investor_status": "verified",
+    "kyc_status": "complete",
+    "email": "summitviewpartners@example.com",
+    "jurisdiction": "Cayman"
+  },
+  {
+    "counterparty_id": "BUY-009",
+    "name": "Westbridge Asset Management",
+    "type": "buyer",
+    "entity_type": "fund",
+    "accredited_investor_status": "verified",
+    "kyc_status": "incomplete",
+    "email": "westbridgeassetmanagement@example.com",
+    "jurisdiction": "Cayman"
+  },
+  {
+    "counterparty_id": "BUY-010",
+    "name": "Cedar Rock Ventures",
+    "type": "buyer",
+    "entity_type": "trust",
+    "accredited_investor_status": "pending",
+    "kyc_status": "incomplete",
+    "email": "cedarrockventures@example.com",
+    "jurisdiction": "Singapore"
+  },
+  {
+    "counterparty_id": "SEL-001",
+    "name": "Apex Holdings",
+    "type": "seller",
+    "entity_type": "spv",
+    "accredited_investor_status": "verified",
+    "kyc_status": "incomplete",
+    "email": "apexholdings@example.com",
+    "jurisdiction": "Singapore"
+  },
+  {
+    "counterparty_id": "SEL-002",
+    "name": "Juniper Creek LLC",
+    "type": "seller",
+    "entity_type": "fund",
+    "accredited_investor_status": "not_required",
+    "kyc_status": "complete",
+    "email": "junipercreekllc@example.com",
+    "jurisdiction": "UK"
+  },
+  {
+    "counterparty_id": "SEL-003",
+    "name": "Silver Fern SPV",
+    "type": "seller",
+    "entity_type": "trust",
+    "accredited_investor_status": "not_required",
+    "kyc_status": "complete",
+    "email": "silverfernspv@example.com",
+    "jurisdiction": "US"
+  },
+  {
+    "counterparty_id": "SEL-004",
+    "name": "Redwood Portfolio LLC",
+    "type": "seller",
+    "entity_type": "fund",
+    "accredited_investor_status": "not_required",
+    "kyc_status": "complete",
+    "email": "redwoodportfoliollc@example.com",
+    "jurisdiction": "Cayman"
+  },
+  {
+    "counterparty_id": "SEL-005",
+    "name": "Lighthouse Nominees",
+    "type": "seller",
+    "entity_type": "fund",
+    "accredited_investor_status": "verified",
+    "kyc_status": "pending",
+    "email": "lighthousenominees@example.com",
+    "jurisdiction": "Singapore"
+  },
+  {
+    "counterparty_id": "SEL-006",
+    "name": "Harborline Holdings",
+    "type": "seller",
+    "entity_type": "trust",
+    "accredited_investor_status": "pending",
+    "kyc_status": "complete",
+    "email": "harborlineholdings@example.com",
+    "jurisdiction": "Cayman"
+  },
+  {
+    "counterparty_id": "SEL-007",
+    "name": "Granite Peak SPV",
+    "type": "seller",
+    "entity_type": "llc",
+    "accredited_investor_status": "pending",
+    "kyc_status": "complete",
+    "email": "granitepeakspv@example.com",
+    "jurisdiction": "Cayman"
+  },
+  {
+    "counterparty_id": "SEL-008",
+    "name": "Northstar Ventures LP",
+    "type": "seller",
+    "entity_type": "fund",
+    "accredited_investor_status": "not_required",
+    "kyc_status": "complete",
+    "email": "northstarventureslp@example.com",
+    "jurisdiction": "UK"
+  },
+  {
+    "counterparty_id": "SEL-009",
+    "name": "Elm Street Capital",
+    "type": "seller",
+    "entity_type": "llc",
+    "accredited_investor_status": "verified",
+    "kyc_status": "complete",
+    "email": "elmstreetcapital@example.com",
+    "jurisdiction": "Cayman"
+  },
+  {
+    "counterparty_id": "SEL-010",
+    "name": "Bridgewater Secondary LLC",
+    "type": "seller",
+    "entity_type": "spv",
+    "accredited_investor_status": "verified",
+    "kyc_status": "complete",
+    "email": "bridgewatersecondaryllc@example.com",
+    "jurisdiction": "US"
+  }
+]

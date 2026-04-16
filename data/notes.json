@@ -1,0 +1,996 @@
+[
+  {
+    "note_id": "NOTE-D-1001-1",
+    "deal_id": "D-1001",
+    "created_at": "2026-04-18T13:02:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1001-2",
+    "deal_id": "D-1001",
+    "created_at": "2026-04-19T01:02:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1002-1",
+    "deal_id": "D-1002",
+    "created_at": "2026-03-30T21:48:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1003-1",
+    "deal_id": "D-1003",
+    "created_at": "2026-03-30T01:47:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1004-1",
+    "deal_id": "D-1004",
+    "created_at": "2026-04-20T16:50:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1005-1",
+    "deal_id": "D-1005",
+    "created_at": "2026-04-14T11:15:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1006-1",
+    "deal_id": "D-1006",
+    "created_at": "2026-03-25T15:58:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1006-2",
+    "deal_id": "D-1006",
+    "created_at": "2026-03-25T12:58:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1007-1",
+    "deal_id": "D-1007",
+    "created_at": "2026-04-13T08:39:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1007-2",
+    "deal_id": "D-1007",
+    "created_at": "2026-04-16T13:39:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1007-3",
+    "deal_id": "D-1007",
+    "created_at": "2026-04-16T12:39:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1008-1",
+    "deal_id": "D-1008",
+    "created_at": "2026-04-10T07:16:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1008-2",
+    "deal_id": "D-1008",
+    "created_at": "2026-04-12T21:16:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1009-1",
+    "deal_id": "D-1009",
+    "created_at": "2026-03-27T11:03:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1009-2",
+    "deal_id": "D-1009",
+    "created_at": "2026-03-28T08:03:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1009-3",
+    "deal_id": "D-1009",
+    "created_at": "2026-03-26T10:03:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1010-1",
+    "deal_id": "D-1010",
+    "created_at": "2026-04-13T14:34:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1011-1",
+    "deal_id": "D-1011",
+    "created_at": "2026-04-20T04:58:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1011-2",
+    "deal_id": "D-1011",
+    "created_at": "2026-04-18T12:58:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1011-3",
+    "deal_id": "D-1011",
+    "created_at": "2026-04-13T06:58:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1012-1",
+    "deal_id": "D-1012",
+    "created_at": "2026-03-31T03:15:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1012-2",
+    "deal_id": "D-1012",
+    "created_at": "2026-03-29T12:15:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1012-3",
+    "deal_id": "D-1012",
+    "created_at": "2026-04-02T18:15:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1013-1",
+    "deal_id": "D-1013",
+    "created_at": "2026-03-31T01:33:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1013-2",
+    "deal_id": "D-1013",
+    "created_at": "2026-03-31T17:33:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1014-1",
+    "deal_id": "D-1014",
+    "created_at": "2026-03-30T10:51:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1014-2",
+    "deal_id": "D-1014",
+    "created_at": "2026-04-01T19:51:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1015-1",
+    "deal_id": "D-1015",
+    "created_at": "2026-03-24T13:22:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1015-2",
+    "deal_id": "D-1015",
+    "created_at": "2026-03-28T08:22:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1016-1",
+    "deal_id": "D-1016",
+    "created_at": "2026-04-06T18:54:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1017-1",
+    "deal_id": "D-1017",
+    "created_at": "2026-04-10T20:31:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1017-2",
+    "deal_id": "D-1017",
+    "created_at": "2026-04-14T22:31:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1018-1",
+    "deal_id": "D-1018",
+    "created_at": "2026-04-05T19:02:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1018-2",
+    "deal_id": "D-1018",
+    "created_at": "2026-04-02T13:02:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1018-3",
+    "deal_id": "D-1018",
+    "created_at": "2026-04-02T11:02:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1019-1",
+    "deal_id": "D-1019",
+    "created_at": "2026-03-27T23:32:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1019-2",
+    "deal_id": "D-1019",
+    "created_at": "2026-03-27T18:32:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1019-3",
+    "deal_id": "D-1019",
+    "created_at": "2026-03-31T07:32:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1020-1",
+    "deal_id": "D-1020",
+    "created_at": "2026-04-07T11:20:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1020-2",
+    "deal_id": "D-1020",
+    "created_at": "2026-04-09T12:20:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1021-1",
+    "deal_id": "D-1021",
+    "created_at": "2026-04-12T03:17:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1021-2",
+    "deal_id": "D-1021",
+    "created_at": "2026-04-05T11:17:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1022-1",
+    "deal_id": "D-1022",
+    "created_at": "2026-03-21T00:55:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1022-2",
+    "deal_id": "D-1022",
+    "created_at": "2026-03-24T22:55:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1022-3",
+    "deal_id": "D-1022",
+    "created_at": "2026-03-25T14:55:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1023-1",
+    "deal_id": "D-1023",
+    "created_at": "2026-04-12T18:52:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1024-1",
+    "deal_id": "D-1024",
+    "created_at": "2026-03-30T15:23:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1024-2",
+    "deal_id": "D-1024",
+    "created_at": "2026-03-30T21:23:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1024-3",
+    "deal_id": "D-1024",
+    "created_at": "2026-04-02T22:23:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1025-1",
+    "deal_id": "D-1025",
+    "created_at": "2026-03-26T15:11:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1026-1",
+    "deal_id": "D-1026",
+    "created_at": "2026-04-13T12:36:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1027-1",
+    "deal_id": "D-1027",
+    "created_at": "2026-03-31T13:49:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1028-1",
+    "deal_id": "D-1028",
+    "created_at": "2026-04-08T12:34:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1028-2",
+    "deal_id": "D-1028",
+    "created_at": "2026-04-08T02:34:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1029-1",
+    "deal_id": "D-1029",
+    "created_at": "2026-03-23T00:04:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1030-1",
+    "deal_id": "D-1030",
+    "created_at": "2026-04-17T18:55:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1031-1",
+    "deal_id": "D-1031",
+    "created_at": "2026-04-18T21:33:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1031-2",
+    "deal_id": "D-1031",
+    "created_at": "2026-04-18T07:33:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1032-1",
+    "deal_id": "D-1032",
+    "created_at": "2026-04-11T21:10:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1032-2",
+    "deal_id": "D-1032",
+    "created_at": "2026-04-13T20:10:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1033-1",
+    "deal_id": "D-1033",
+    "created_at": "2026-03-28T11:26:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1034-1",
+    "deal_id": "D-1034",
+    "created_at": "2026-04-15T15:51:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1035-1",
+    "deal_id": "D-1035",
+    "created_at": "2026-04-06T04:09:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1035-2",
+    "deal_id": "D-1035",
+    "created_at": "2026-04-10T09:09:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1035-3",
+    "deal_id": "D-1035",
+    "created_at": "2026-04-05T05:09:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1036-1",
+    "deal_id": "D-1036",
+    "created_at": "2026-04-05T10:20:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1036-2",
+    "deal_id": "D-1036",
+    "created_at": "2026-04-03T03:20:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1037-1",
+    "deal_id": "D-1037",
+    "created_at": "2026-04-10T06:57:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1037-2",
+    "deal_id": "D-1037",
+    "created_at": "2026-04-05T07:57:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1037-3",
+    "deal_id": "D-1037",
+    "created_at": "2026-04-09T23:57:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1038-1",
+    "deal_id": "D-1038",
+    "created_at": "2026-04-17T12:01:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1038-2",
+    "deal_id": "D-1038",
+    "created_at": "2026-04-17T03:01:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1038-3",
+    "deal_id": "D-1038",
+    "created_at": "2026-04-13T09:01:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1039-1",
+    "deal_id": "D-1039",
+    "created_at": "2026-03-27T17:17:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1040-1",
+    "deal_id": "D-1040",
+    "created_at": "2026-03-25T02:45:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1041-1",
+    "deal_id": "D-1041",
+    "created_at": "2026-03-26T22:04:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1041-2",
+    "deal_id": "D-1041",
+    "created_at": "2026-03-23T12:04:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1042-1",
+    "deal_id": "D-1042",
+    "created_at": "2026-04-07T04:22:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1043-1",
+    "deal_id": "D-1043",
+    "created_at": "2026-04-05T07:01:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1044-1",
+    "deal_id": "D-1044",
+    "created_at": "2026-04-12T09:47:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1044-2",
+    "deal_id": "D-1044",
+    "created_at": "2026-04-10T10:47:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1044-3",
+    "deal_id": "D-1044",
+    "created_at": "2026-04-13T01:47:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1045-1",
+    "deal_id": "D-1045",
+    "created_at": "2026-04-07T00:22:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1045-2",
+    "deal_id": "D-1045",
+    "created_at": "2026-04-03T13:22:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1046-1",
+    "deal_id": "D-1046",
+    "created_at": "2026-04-02T14:14:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1047-1",
+    "deal_id": "D-1047",
+    "created_at": "2026-04-01T23:18:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1047-2",
+    "deal_id": "D-1047",
+    "created_at": "2026-03-29T14:18:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1048-1",
+    "deal_id": "D-1048",
+    "created_at": "2026-04-13T21:01:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1048-2",
+    "deal_id": "D-1048",
+    "created_at": "2026-04-16T13:01:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1049-1",
+    "deal_id": "D-1049",
+    "created_at": "2026-04-04T19:33:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1049-2",
+    "deal_id": "D-1049",
+    "created_at": "2026-04-02T13:33:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1050-1",
+    "deal_id": "D-1050",
+    "created_at": "2026-03-27T10:03:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1050-2",
+    "deal_id": "D-1050",
+    "created_at": "2026-03-29T06:03:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1051-1",
+    "deal_id": "D-1051",
+    "created_at": "2026-04-03T21:14:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1051-2",
+    "deal_id": "D-1051",
+    "created_at": "2026-04-02T15:14:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1052-1",
+    "deal_id": "D-1052",
+    "created_at": "2026-04-18T15:07:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1052-2",
+    "deal_id": "D-1052",
+    "created_at": "2026-04-17T23:07:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1052-3",
+    "deal_id": "D-1052",
+    "created_at": "2026-04-16T00:07:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1053-1",
+    "deal_id": "D-1053",
+    "created_at": "2026-03-29T20:37:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1054-1",
+    "deal_id": "D-1054",
+    "created_at": "2026-04-01T07:29:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1054-2",
+    "deal_id": "D-1054",
+    "created_at": "2026-04-05T04:29:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1054-3",
+    "deal_id": "D-1054",
+    "created_at": "2026-04-05T11:29:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1055-1",
+    "deal_id": "D-1055",
+    "created_at": "2026-04-08T06:03:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1055-2",
+    "deal_id": "D-1055",
+    "created_at": "2026-04-14T01:03:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1055-3",
+    "deal_id": "D-1055",
+    "created_at": "2026-04-07T23:03:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1056-1",
+    "deal_id": "D-1056",
+    "created_at": "2026-03-31T15:40:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1057-1",
+    "deal_id": "D-1057",
+    "created_at": "2026-04-06T10:32:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1058-1",
+    "deal_id": "D-1058",
+    "created_at": "2026-04-14T17:35:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1059-1",
+    "deal_id": "D-1059",
+    "created_at": "2026-04-07T07:06:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1059-2",
+    "deal_id": "D-1059",
+    "created_at": "2026-04-02T14:06:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1059-3",
+    "deal_id": "D-1059",
+    "created_at": "2026-04-05T22:06:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1060-1",
+    "deal_id": "D-1060",
+    "created_at": "2026-04-12T22:13:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1061-1",
+    "deal_id": "D-1061",
+    "created_at": "2026-04-16T08:36:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1061-2",
+    "deal_id": "D-1061",
+    "created_at": "2026-04-17T07:36:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1062-1",
+    "deal_id": "D-1062",
+    "created_at": "2026-04-19T01:09:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1062-2",
+    "deal_id": "D-1062",
+    "created_at": "2026-04-21T00:09:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1062-3",
+    "deal_id": "D-1062",
+    "created_at": "2026-04-17T12:09:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1063-1",
+    "deal_id": "D-1063",
+    "created_at": "2026-04-12T23:21:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1064-1",
+    "deal_id": "D-1064",
+    "created_at": "2026-03-27T08:12:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1064-2",
+    "deal_id": "D-1064",
+    "created_at": "2026-03-28T13:12:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1065-1",
+    "deal_id": "D-1065",
+    "created_at": "2026-03-30T19:04:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1065-2",
+    "deal_id": "D-1065",
+    "created_at": "2026-04-02T01:04:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1065-3",
+    "deal_id": "D-1065",
+    "created_at": "2026-03-30T02:04:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1066-1",
+    "deal_id": "D-1066",
+    "created_at": "2026-03-22T20:42:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1067-1",
+    "deal_id": "D-1067",
+    "created_at": "2026-04-16T00:20:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1067-2",
+    "deal_id": "D-1067",
+    "created_at": "2026-04-13T21:20:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1067-3",
+    "deal_id": "D-1067",
+    "created_at": "2026-04-15T11:20:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1068-1",
+    "deal_id": "D-1068",
+    "created_at": "2026-04-14T15:03:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1069-1",
+    "deal_id": "D-1069",
+    "created_at": "2026-03-27T04:01:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1069-2",
+    "deal_id": "D-1069",
+    "created_at": "2026-03-28T08:01:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1070-1",
+    "deal_id": "D-1070",
+    "created_at": "2026-03-27T23:35:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1070-2",
+    "deal_id": "D-1070",
+    "created_at": "2026-03-31T15:35:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1070-3",
+    "deal_id": "D-1070",
+    "created_at": "2026-03-24T14:35:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1071-1",
+    "deal_id": "D-1071",
+    "created_at": "2026-04-16T01:19:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1072-1",
+    "deal_id": "D-1072",
+    "created_at": "2026-04-07T21:02:00",
+    "author_role": "compliance",
+    "body": "Entity details should be reconciled before moving to signature."
+  },
+  {
+    "note_id": "NOTE-D-1072-2",
+    "deal_id": "D-1072",
+    "created_at": "2026-04-13T09:02:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1073-1",
+    "deal_id": "D-1073",
+    "created_at": "2026-04-09T08:53:00",
+    "author_role": "compliance",
+    "body": "KYC review cannot be cleared until the accreditation status is resolved."
+  },
+  {
+    "note_id": "NOTE-D-1073-2",
+    "deal_id": "D-1073",
+    "created_at": "2026-04-13T06:53:00",
+    "author_role": "transaction_services",
+    "body": "Transaction Services is waiting on missing counterparty information."
+  },
+  {
+    "note_id": "NOTE-D-1074-1",
+    "deal_id": "D-1074",
+    "created_at": "2026-04-16T10:14:00",
+    "author_role": "transaction_services",
+    "body": "Buyer appears ready, but seller-side documentation is incomplete."
+  },
+  {
+    "note_id": "NOTE-D-1074-2",
+    "deal_id": "D-1074",
+    "created_at": "2026-04-19T03:14:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  },
+  {
+    "note_id": "NOTE-D-1074-3",
+    "deal_id": "D-1074",
+    "created_at": "2026-04-20T19:14:00",
+    "author_role": "compliance",
+    "body": "Potential audit sensitivity due to inconsistent naming across files."
+  },
+  {
+    "note_id": "NOTE-D-1075-1",
+    "deal_id": "D-1075",
+    "created_at": "2026-03-29T16:57:00",
+    "author_role": "transaction_services",
+    "body": "Need to verify if the latest uploaded file supersedes the prior version."
+  }
+]

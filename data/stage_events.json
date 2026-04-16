@@ -1,0 +1,2610 @@
+[
+  {
+    "event_id": "EV-D-1001-1",
+    "deal_id": "D-1001",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-14T11:02:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1001-2",
+    "deal_id": "D-1001",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-15T11:02:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1001-3",
+    "deal_id": "D-1001",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-17T08:02:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1001-4",
+    "deal_id": "D-1001",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-18T19:02:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1002-1",
+    "deal_id": "D-1002",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-30T03:48:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1002-2",
+    "deal_id": "D-1002",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-31T23:48:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1002-3",
+    "deal_id": "D-1002",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-01T12:48:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1002-4",
+    "deal_id": "D-1002",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-02T01:48:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1002-5",
+    "deal_id": "D-1002",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-03T16:48:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1002-6",
+    "deal_id": "D-1002",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-04T04:48:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1002-7",
+    "deal_id": "D-1002",
+    "from_stage": "settlement",
+    "to_stage": "closed",
+    "changed_at": "2026-04-05T22:48:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1003-1",
+    "deal_id": "D-1003",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-25T14:47:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1003-2",
+    "deal_id": "D-1003",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-27T01:47:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1003-3",
+    "deal_id": "D-1003",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-28T11:47:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1004-1",
+    "deal_id": "D-1004",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-13T09:50:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1004-2",
+    "deal_id": "D-1004",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-14T05:50:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1004-3",
+    "deal_id": "D-1004",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-15T07:50:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1004-4",
+    "deal_id": "D-1004",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-16T04:50:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1004-5",
+    "deal_id": "D-1004",
+    "from_stage": "rofr_review",
+    "to_stage": "on_hold",
+    "changed_at": "2026-04-16T15:50:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1005-1",
+    "deal_id": "D-1005",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-08T16:15:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1005-2",
+    "deal_id": "D-1005",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-09T04:15:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1005-3",
+    "deal_id": "D-1005",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-10T22:15:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1005-4",
+    "deal_id": "D-1005",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-11T19:15:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1005-5",
+    "deal_id": "D-1005",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-13T11:15:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1005-6",
+    "deal_id": "D-1005",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-14T11:15:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1005-7",
+    "deal_id": "D-1005",
+    "from_stage": "settlement",
+    "to_stage": "closed",
+    "changed_at": "2026-04-15T03:15:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1006-1",
+    "deal_id": "D-1006",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-20T03:58:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1006-2",
+    "deal_id": "D-1006",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-20T20:58:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1006-3",
+    "deal_id": "D-1006",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-22T14:58:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1006-4",
+    "deal_id": "D-1006",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-23T00:58:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1006-5",
+    "deal_id": "D-1006",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-03-24T07:58:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1007-1",
+    "deal_id": "D-1007",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-08T21:39:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1008-1",
+    "deal_id": "D-1008",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-05T14:16:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1008-2",
+    "deal_id": "D-1008",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-06T16:16:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1008-3",
+    "deal_id": "D-1008",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-07T13:16:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1008-4",
+    "deal_id": "D-1008",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-09T00:16:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1008-5",
+    "deal_id": "D-1008",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-10T21:16:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1008-6",
+    "deal_id": "D-1008",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-12T19:16:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1009-1",
+    "deal_id": "D-1009",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-25T12:03:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1009-2",
+    "deal_id": "D-1009",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-26T04:03:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1010-1",
+    "deal_id": "D-1010",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-14T04:34:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1010-2",
+    "deal_id": "D-1010",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-16T02:34:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1010-3",
+    "deal_id": "D-1010",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-17T00:34:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1010-4",
+    "deal_id": "D-1010",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-18T15:34:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1010-5",
+    "deal_id": "D-1010",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-19T13:34:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1010-6",
+    "deal_id": "D-1010",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-20T14:34:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1011-1",
+    "deal_id": "D-1011",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-13T10:58:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1011-2",
+    "deal_id": "D-1011",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-14T04:58:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1011-3",
+    "deal_id": "D-1011",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-16T02:58:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1012-1",
+    "deal_id": "D-1012",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-25T22:15:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1012-2",
+    "deal_id": "D-1012",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-26T23:15:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1012-3",
+    "deal_id": "D-1012",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-28T11:15:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1012-4",
+    "deal_id": "D-1012",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-29T10:15:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1012-5",
+    "deal_id": "D-1012",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-03-30T23:15:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1012-6",
+    "deal_id": "D-1012",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-01T19:15:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1012-7",
+    "deal_id": "D-1012",
+    "from_stage": "settlement",
+    "to_stage": "closed",
+    "changed_at": "2026-04-03T18:15:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1013-1",
+    "deal_id": "D-1013",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-30T08:33:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1013-2",
+    "deal_id": "D-1013",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-31T05:33:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1013-3",
+    "deal_id": "D-1013",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-01T19:33:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1013-4",
+    "deal_id": "D-1013",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-02T20:33:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1014-1",
+    "deal_id": "D-1014",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-26T19:51:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1014-2",
+    "deal_id": "D-1014",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-28T06:51:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1014-3",
+    "deal_id": "D-1014",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-29T09:51:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1014-4",
+    "deal_id": "D-1014",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-31T05:51:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1014-5",
+    "deal_id": "D-1014",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-02T04:51:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1015-1",
+    "deal_id": "D-1015",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-22T12:22:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1016-1",
+    "deal_id": "D-1016",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-05T11:54:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1016-2",
+    "deal_id": "D-1016",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-07T03:54:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1016-3",
+    "deal_id": "D-1016",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-07T11:54:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1016-4",
+    "deal_id": "D-1016",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-09T05:54:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1017-1",
+    "deal_id": "D-1017",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-09T15:31:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1017-2",
+    "deal_id": "D-1017",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-10T08:31:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1017-3",
+    "deal_id": "D-1017",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-11T16:31:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1017-4",
+    "deal_id": "D-1017",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-12T12:31:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1018-1",
+    "deal_id": "D-1018",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-31T13:02:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1018-2",
+    "deal_id": "D-1018",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-01T03:02:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1018-3",
+    "deal_id": "D-1018",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-02T20:02:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1019-1",
+    "deal_id": "D-1019",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-24T15:32:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1019-2",
+    "deal_id": "D-1019",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-25T09:32:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1019-3",
+    "deal_id": "D-1019",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-26T04:32:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1019-4",
+    "deal_id": "D-1019",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-26T17:32:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1019-5",
+    "deal_id": "D-1019",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-03-28T16:32:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1019-6",
+    "deal_id": "D-1019",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-03-30T00:32:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1020-1",
+    "deal_id": "D-1020",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-05T13:20:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1020-2",
+    "deal_id": "D-1020",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-06T20:20:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1020-3",
+    "deal_id": "D-1020",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-07T12:20:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1020-4",
+    "deal_id": "D-1020",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-08T01:20:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1020-5",
+    "deal_id": "D-1020",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-09T03:20:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1021-1",
+    "deal_id": "D-1021",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-04T12:17:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1021-2",
+    "deal_id": "D-1021",
+    "from_stage": "intake",
+    "to_stage": "on_hold",
+    "changed_at": "2026-04-04T22:17:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1022-1",
+    "deal_id": "D-1022",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-20T06:55:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1022-2",
+    "deal_id": "D-1022",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-21T04:55:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1022-3",
+    "deal_id": "D-1022",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-22T09:55:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1022-4",
+    "deal_id": "D-1022",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-23T02:55:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1022-5",
+    "deal_id": "D-1022",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-03-25T00:55:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1022-6",
+    "deal_id": "D-1022",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-03-25T08:55:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1022-7",
+    "deal_id": "D-1022",
+    "from_stage": "settlement",
+    "to_stage": "closed",
+    "changed_at": "2026-03-26T09:55:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1023-1",
+    "deal_id": "D-1023",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-12T16:52:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1023-2",
+    "deal_id": "D-1023",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-13T13:52:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1023-3",
+    "deal_id": "D-1023",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-15T00:52:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1024-1",
+    "deal_id": "D-1024",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-29T15:23:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1024-2",
+    "deal_id": "D-1024",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-31T05:23:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1024-3",
+    "deal_id": "D-1024",
+    "from_stage": "kyc_review",
+    "to_stage": "on_hold",
+    "changed_at": "2026-04-01T03:23:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1025-1",
+    "deal_id": "D-1025",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-24T01:11:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1025-2",
+    "deal_id": "D-1025",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-25T11:11:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1025-3",
+    "deal_id": "D-1025",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-26T12:11:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1025-4",
+    "deal_id": "D-1025",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-27T09:11:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1026-1",
+    "deal_id": "D-1026",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-11T06:36:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1026-2",
+    "deal_id": "D-1026",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-13T02:36:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1026-3",
+    "deal_id": "D-1026",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-14T11:36:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1026-4",
+    "deal_id": "D-1026",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-16T11:36:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1026-5",
+    "deal_id": "D-1026",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-17T21:36:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1026-6",
+    "deal_id": "D-1026",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-18T23:36:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1027-1",
+    "deal_id": "D-1027",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-27T21:49:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1027-2",
+    "deal_id": "D-1027",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-29T00:49:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1027-3",
+    "deal_id": "D-1027",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-30T01:49:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1027-4",
+    "deal_id": "D-1027",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-31T22:49:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1027-5",
+    "deal_id": "D-1027",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-01T09:49:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1027-6",
+    "deal_id": "D-1027",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-02T15:49:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1028-1",
+    "deal_id": "D-1028",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-07T09:34:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1028-2",
+    "deal_id": "D-1028",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-08T02:34:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1028-3",
+    "deal_id": "D-1028",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-09T07:34:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1028-4",
+    "deal_id": "D-1028",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-09T20:34:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1029-1",
+    "deal_id": "D-1029",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-19T10:04:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1029-2",
+    "deal_id": "D-1029",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-20T20:04:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1029-3",
+    "deal_id": "D-1029",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-22T03:04:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1029-4",
+    "deal_id": "D-1029",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-23T02:04:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1029-5",
+    "deal_id": "D-1029",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-03-24T14:04:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1029-6",
+    "deal_id": "D-1029",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-03-26T13:04:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1030-1",
+    "deal_id": "D-1030",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-11T08:55:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1030-2",
+    "deal_id": "D-1030",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-11T17:55:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1030-3",
+    "deal_id": "D-1030",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-12T21:55:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1030-4",
+    "deal_id": "D-1030",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-13T11:55:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1030-5",
+    "deal_id": "D-1030",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-14T16:55:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1030-6",
+    "deal_id": "D-1030",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-15T09:55:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1030-7",
+    "deal_id": "D-1030",
+    "from_stage": "settlement",
+    "to_stage": "closed",
+    "changed_at": "2026-04-16T01:55:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1031-1",
+    "deal_id": "D-1031",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-12T06:33:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1031-2",
+    "deal_id": "D-1031",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-14T01:33:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1031-3",
+    "deal_id": "D-1031",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-14T10:33:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1032-1",
+    "deal_id": "D-1032",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-10T00:10:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1033-1",
+    "deal_id": "D-1033",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-27T04:26:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1034-1",
+    "deal_id": "D-1034",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-13T13:51:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1034-2",
+    "deal_id": "D-1034",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-14T08:51:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1034-3",
+    "deal_id": "D-1034",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-15T23:51:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1034-4",
+    "deal_id": "D-1034",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-17T16:51:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1034-5",
+    "deal_id": "D-1034",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-19T00:51:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1034-6",
+    "deal_id": "D-1034",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-20T19:51:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1034-7",
+    "deal_id": "D-1034",
+    "from_stage": "settlement",
+    "to_stage": "closed",
+    "changed_at": "2026-04-21T10:51:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1035-1",
+    "deal_id": "D-1035",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-03T21:09:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1035-2",
+    "deal_id": "D-1035",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-05T09:09:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1035-3",
+    "deal_id": "D-1035",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-06T22:09:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1035-4",
+    "deal_id": "D-1035",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-08T15:09:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1035-5",
+    "deal_id": "D-1035",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-09T21:09:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1036-1",
+    "deal_id": "D-1036",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-01T22:20:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1036-2",
+    "deal_id": "D-1036",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-03T10:20:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1036-3",
+    "deal_id": "D-1036",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-04T20:20:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1036-4",
+    "deal_id": "D-1036",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-06T10:20:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1036-5",
+    "deal_id": "D-1036",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-07T23:20:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1036-6",
+    "deal_id": "D-1036",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-08T20:20:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1037-1",
+    "deal_id": "D-1037",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-05T07:57:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1037-2",
+    "deal_id": "D-1037",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-06T14:57:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1037-3",
+    "deal_id": "D-1037",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-07T00:57:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1038-1",
+    "deal_id": "D-1038",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-11T16:01:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1038-2",
+    "deal_id": "D-1038",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-13T06:01:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1038-3",
+    "deal_id": "D-1038",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-13T15:01:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1038-4",
+    "deal_id": "D-1038",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-14T22:01:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1038-5",
+    "deal_id": "D-1038",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-16T03:01:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1038-6",
+    "deal_id": "D-1038",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-16T18:01:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1038-7",
+    "deal_id": "D-1038",
+    "from_stage": "settlement",
+    "to_stage": "closed",
+    "changed_at": "2026-04-18T04:01:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1039-1",
+    "deal_id": "D-1039",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-22T06:17:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1039-2",
+    "deal_id": "D-1039",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-24T01:17:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1039-3",
+    "deal_id": "D-1039",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-25T02:17:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1040-1",
+    "deal_id": "D-1040",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-22T13:45:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1040-2",
+    "deal_id": "D-1040",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-24T08:45:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1041-1",
+    "deal_id": "D-1041",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-19T05:04:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1041-2",
+    "deal_id": "D-1041",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-20T10:04:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1041-3",
+    "deal_id": "D-1041",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-21T04:04:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1041-4",
+    "deal_id": "D-1041",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-22T17:04:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1041-5",
+    "deal_id": "D-1041",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-03-23T17:04:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1041-6",
+    "deal_id": "D-1041",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-03-24T12:04:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1041-7",
+    "deal_id": "D-1041",
+    "from_stage": "settlement",
+    "to_stage": "closed",
+    "changed_at": "2026-03-24T20:04:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1042-1",
+    "deal_id": "D-1042",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-01T17:22:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1042-2",
+    "deal_id": "D-1042",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-03T00:22:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1042-3",
+    "deal_id": "D-1042",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-03T12:22:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1042-4",
+    "deal_id": "D-1042",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-05T08:22:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1043-1",
+    "deal_id": "D-1043",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-30T06:01:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1043-2",
+    "deal_id": "D-1043",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-30T19:01:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1043-3",
+    "deal_id": "D-1043",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-01T13:01:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1043-4",
+    "deal_id": "D-1043",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-02T05:01:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1043-5",
+    "deal_id": "D-1043",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-03T11:01:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1043-6",
+    "deal_id": "D-1043",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-04T02:01:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1044-1",
+    "deal_id": "D-1044",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-08T04:47:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1044-2",
+    "deal_id": "D-1044",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-09T14:47:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1044-3",
+    "deal_id": "D-1044",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-10T17:47:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1044-4",
+    "deal_id": "D-1044",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-11T18:47:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1045-1",
+    "deal_id": "D-1045",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-02T17:22:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1046-1",
+    "deal_id": "D-1046",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-28T18:14:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1046-2",
+    "deal_id": "D-1046",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-29T12:14:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1046-3",
+    "deal_id": "D-1046",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-30T18:14:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1047-1",
+    "deal_id": "D-1047",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-27T03:18:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1047-2",
+    "deal_id": "D-1047",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-27T17:18:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1047-3",
+    "deal_id": "D-1047",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-28T07:18:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1047-4",
+    "deal_id": "D-1047",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-30T00:18:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1047-5",
+    "deal_id": "D-1047",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-03-30T17:18:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1048-1",
+    "deal_id": "D-1048",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-13T22:01:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1049-1",
+    "deal_id": "D-1049",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-29T19:33:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1049-2",
+    "deal_id": "D-1049",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-30T23:33:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1049-3",
+    "deal_id": "D-1049",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-01T06:33:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1050-1",
+    "deal_id": "D-1050",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-23T16:03:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1050-2",
+    "deal_id": "D-1050",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-24T19:03:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1050-3",
+    "deal_id": "D-1050",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-26T09:03:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1050-4",
+    "deal_id": "D-1050",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-26T21:03:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1050-5",
+    "deal_id": "D-1050",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-03-28T04:03:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1050-6",
+    "deal_id": "D-1050",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-03-29T04:03:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1051-1",
+    "deal_id": "D-1051",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-29T16:14:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1051-2",
+    "deal_id": "D-1051",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-31T03:14:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1051-3",
+    "deal_id": "D-1051",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-01T11:14:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1051-4",
+    "deal_id": "D-1051",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-01T23:14:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1051-5",
+    "deal_id": "D-1051",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-03T11:14:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1051-6",
+    "deal_id": "D-1051",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-05T09:14:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1052-1",
+    "deal_id": "D-1052",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-13T23:07:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1052-2",
+    "deal_id": "D-1052",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-14T09:07:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1052-3",
+    "deal_id": "D-1052",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-15T00:07:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1052-4",
+    "deal_id": "D-1052",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-15T09:07:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1053-1",
+    "deal_id": "D-1053",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-30T00:37:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1053-2",
+    "deal_id": "D-1053",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-31T13:37:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1053-3",
+    "deal_id": "D-1053",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-02T12:37:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1053-4",
+    "deal_id": "D-1053",
+    "from_stage": "docs_pending",
+    "to_stage": "on_hold",
+    "changed_at": "2026-04-03T07:37:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1054-1",
+    "deal_id": "D-1054",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-30T01:29:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1054-2",
+    "deal_id": "D-1054",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-31T19:29:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1054-3",
+    "deal_id": "D-1054",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-01T21:29:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1054-4",
+    "deal_id": "D-1054",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-02T15:29:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1054-5",
+    "deal_id": "D-1054",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-04T04:29:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1054-6",
+    "deal_id": "D-1054",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-06T00:29:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1054-7",
+    "deal_id": "D-1054",
+    "from_stage": "settlement",
+    "to_stage": "closed",
+    "changed_at": "2026-04-07T15:29:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1055-1",
+    "deal_id": "D-1055",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-07T22:03:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1055-2",
+    "deal_id": "D-1055",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-08T15:03:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1055-3",
+    "deal_id": "D-1055",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-10T11:03:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1056-1",
+    "deal_id": "D-1056",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-31T06:40:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1056-2",
+    "deal_id": "D-1056",
+    "from_stage": "intake",
+    "to_stage": "on_hold",
+    "changed_at": "2026-04-01T00:40:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1057-1",
+    "deal_id": "D-1057",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-29T16:32:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1057-2",
+    "deal_id": "D-1057",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-30T20:32:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1057-3",
+    "deal_id": "D-1057",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-01T03:32:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1057-4",
+    "deal_id": "D-1057",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-02T06:32:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1057-5",
+    "deal_id": "D-1057",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-02T22:32:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1058-1",
+    "deal_id": "D-1058",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-08T12:35:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1058-2",
+    "deal_id": "D-1058",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-10T05:35:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1058-3",
+    "deal_id": "D-1058",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-10T13:35:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1058-4",
+    "deal_id": "D-1058",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-11T20:35:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1058-5",
+    "deal_id": "D-1058",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-13T00:35:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1059-1",
+    "deal_id": "D-1059",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-01T08:06:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1059-2",
+    "deal_id": "D-1059",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-02T02:06:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1059-3",
+    "deal_id": "D-1059",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-03T17:06:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1060-1",
+    "deal_id": "D-1060",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-12T14:13:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1060-2",
+    "deal_id": "D-1060",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-13T18:13:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1060-3",
+    "deal_id": "D-1060",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-14T17:13:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1060-4",
+    "deal_id": "D-1060",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-16T03:13:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1060-5",
+    "deal_id": "D-1060",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-17T07:13:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1060-6",
+    "deal_id": "D-1060",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-18T08:13:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1061-1",
+    "deal_id": "D-1061",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-15T09:36:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1061-2",
+    "deal_id": "D-1061",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-16T22:36:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1061-3",
+    "deal_id": "D-1061",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-17T11:36:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1061-4",
+    "deal_id": "D-1061",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-19T08:36:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1061-5",
+    "deal_id": "D-1061",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-19T22:36:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1061-6",
+    "deal_id": "D-1061",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-21T14:36:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1061-7",
+    "deal_id": "D-1061",
+    "from_stage": "settlement",
+    "to_stage": "closed",
+    "changed_at": "2026-04-22T06:36:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1062-1",
+    "deal_id": "D-1062",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-13T18:09:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1062-2",
+    "deal_id": "D-1062",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-14T13:09:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1062-3",
+    "deal_id": "D-1062",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-14T22:09:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1062-4",
+    "deal_id": "D-1062",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-16T07:09:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1062-5",
+    "deal_id": "D-1062",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-17T19:09:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1062-6",
+    "deal_id": "D-1062",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-19T14:09:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1062-7",
+    "deal_id": "D-1062",
+    "from_stage": "settlement",
+    "to_stage": "closed",
+    "changed_at": "2026-04-21T09:09:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1063-1",
+    "deal_id": "D-1063",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-12T15:21:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1063-2",
+    "deal_id": "D-1063",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-13T14:21:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1063-3",
+    "deal_id": "D-1063",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-15T14:21:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1063-4",
+    "deal_id": "D-1063",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-17T08:21:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1064-1",
+    "deal_id": "D-1064",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-24T16:12:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1064-2",
+    "deal_id": "D-1064",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-25T19:12:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1064-3",
+    "deal_id": "D-1064",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-26T14:12:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1064-4",
+    "deal_id": "D-1064",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-28T05:12:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1064-5",
+    "deal_id": "D-1064",
+    "from_stage": "rofr_review",
+    "to_stage": "on_hold",
+    "changed_at": "2026-03-28T15:12:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1065-1",
+    "deal_id": "D-1065",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-29T10:04:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1065-2",
+    "deal_id": "D-1065",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-31T06:04:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1065-3",
+    "deal_id": "D-1065",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-31T16:04:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1065-4",
+    "deal_id": "D-1065",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-01T11:04:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1065-5",
+    "deal_id": "D-1065",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-03T09:04:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1065-6",
+    "deal_id": "D-1065",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-04T13:04:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1066-1",
+    "deal_id": "D-1066",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-22T09:42:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1066-2",
+    "deal_id": "D-1066",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-23T03:42:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1066-3",
+    "deal_id": "D-1066",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-25T01:42:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1066-4",
+    "deal_id": "D-1066",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-26T12:42:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1067-1",
+    "deal_id": "D-1067",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-10T01:20:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1067-2",
+    "deal_id": "D-1067",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-11T09:20:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1068-1",
+    "deal_id": "D-1068",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-13T08:03:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1068-2",
+    "deal_id": "D-1068",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-14T04:03:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1068-3",
+    "deal_id": "D-1068",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-14T20:03:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1068-4",
+    "deal_id": "D-1068",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-15T06:03:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1069-1",
+    "deal_id": "D-1069",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-23T10:01:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1069-2",
+    "deal_id": "D-1069",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-23T20:01:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1069-3",
+    "deal_id": "D-1069",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-24T15:01:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1069-4",
+    "deal_id": "D-1069",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-03-25T16:01:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1069-5",
+    "deal_id": "D-1069",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-03-27T01:01:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1070-1",
+    "deal_id": "D-1070",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-24T03:35:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1071-1",
+    "deal_id": "D-1071",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-09T19:19:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1071-2",
+    "deal_id": "D-1071",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-10T20:19:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1071-3",
+    "deal_id": "D-1071",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-12T07:19:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1071-4",
+    "deal_id": "D-1071",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-13T15:19:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1071-5",
+    "deal_id": "D-1071",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-14T21:19:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1071-6",
+    "deal_id": "D-1071",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-16T10:19:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1072-1",
+    "deal_id": "D-1072",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-06T21:02:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1072-2",
+    "deal_id": "D-1072",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-08T13:02:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1072-3",
+    "deal_id": "D-1072",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-09T16:02:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1072-4",
+    "deal_id": "D-1072",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-10T10:02:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1072-5",
+    "deal_id": "D-1072",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-12T05:02:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1073-1",
+    "deal_id": "D-1073",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-09T11:53:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1073-2",
+    "deal_id": "D-1073",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-04-10T06:53:00",
+    "changed_by": "transaction_services"
+  },
+  {
+    "event_id": "EV-D-1073-3",
+    "deal_id": "D-1073",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-04-10T19:53:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1073-4",
+    "deal_id": "D-1073",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-12T10:53:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1074-1",
+    "deal_id": "D-1074",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-04-15T05:14:00",
+    "changed_by": "sales"
+  },
+  {
+    "event_id": "EV-D-1075-1",
+    "deal_id": "D-1075",
+    "from_stage": null,
+    "to_stage": "intake",
+    "changed_at": "2026-03-27T16:57:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1075-2",
+    "deal_id": "D-1075",
+    "from_stage": "intake",
+    "to_stage": "kyc_review",
+    "changed_at": "2026-03-28T17:57:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1075-3",
+    "deal_id": "D-1075",
+    "from_stage": "kyc_review",
+    "to_stage": "docs_pending",
+    "changed_at": "2026-03-30T16:57:00",
+    "changed_by": "compliance"
+  },
+  {
+    "event_id": "EV-D-1075-4",
+    "deal_id": "D-1075",
+    "from_stage": "docs_pending",
+    "to_stage": "rofr_review",
+    "changed_at": "2026-04-01T14:57:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1075-5",
+    "deal_id": "D-1075",
+    "from_stage": "rofr_review",
+    "to_stage": "signature",
+    "changed_at": "2026-04-02T06:57:00",
+    "changed_by": "system"
+  },
+  {
+    "event_id": "EV-D-1075-6",
+    "deal_id": "D-1075",
+    "from_stage": "signature",
+    "to_stage": "settlement",
+    "changed_at": "2026-04-03T16:57:00",
+    "changed_by": "sales"
+  }
+]

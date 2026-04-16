@@ -1,0 +1,1973 @@
+[
+  {
+    "message_id": "MSG-D-1001-1",
+    "deal_id": "D-1001",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-14T05:02:00",
+    "subject": "Re: Glean secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1001-2",
+    "deal_id": "D-1001",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-19T04:02:00",
+    "subject": "Re: Glean secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1001-3",
+    "deal_id": "D-1001",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-14T18:02:00",
+    "subject": "Re: Glean secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1001-4",
+    "deal_id": "D-1001",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-16T16:02:00",
+    "subject": "Re: Glean secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1002-1",
+    "deal_id": "D-1002",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-05T06:48:00",
+    "subject": "Re: Perplexity secondary transaction",
+    "body": "The share count in the agreement looks different from what we discussed earlier."
+  },
+  {
+    "message_id": "MSG-D-1002-2",
+    "deal_id": "D-1002",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-05T17:48:00",
+    "subject": "Re: Perplexity secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1003-1",
+    "deal_id": "D-1003",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-26T15:47:00",
+    "subject": "Re: Chime secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1003-2",
+    "deal_id": "D-1003",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-03-30T02:47:00",
+    "subject": "Re: Chime secondary transaction",
+    "body": "Legal noted a discrepancy in the entity name across the documents."
+  },
+  {
+    "message_id": "MSG-D-1004-1",
+    "deal_id": "D-1004",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-14T18:50:00",
+    "subject": "Re: Airtable secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1004-2",
+    "deal_id": "D-1004",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-20T02:50:00",
+    "subject": "Re: Airtable secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1005-1",
+    "deal_id": "D-1005",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-11T19:15:00",
+    "subject": "Re: Glean secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1005-2",
+    "deal_id": "D-1005",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-12T13:15:00",
+    "subject": "Re: Glean secondary transaction",
+    "body": "We still have not received the seller consent required to proceed."
+  },
+  {
+    "message_id": "MSG-D-1006-1",
+    "deal_id": "D-1006",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-22T23:58:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1006-2",
+    "deal_id": "D-1006",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-03-20T17:58:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1006-3",
+    "deal_id": "D-1006",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-27T14:58:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1006-4",
+    "deal_id": "D-1006",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-21T14:58:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1007-1",
+    "deal_id": "D-1007",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-15T18:39:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Legal noted a discrepancy in the entity name across the documents."
+  },
+  {
+    "message_id": "MSG-D-1007-2",
+    "deal_id": "D-1007",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-11T07:39:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1007-3",
+    "deal_id": "D-1007",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-09T07:39:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Legal noted a discrepancy in the entity name across the documents."
+  },
+  {
+    "message_id": "MSG-D-1008-1",
+    "deal_id": "D-1008",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-07T09:16:00",
+    "subject": "Re: Perplexity secondary transaction",
+    "body": "Please note the ROFR response window closes tomorrow."
+  },
+  {
+    "message_id": "MSG-D-1008-2",
+    "deal_id": "D-1008",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-07T21:16:00",
+    "subject": "Re: Perplexity secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1009-1",
+    "deal_id": "D-1009",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-26T11:03:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1009-2",
+    "deal_id": "D-1009",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-27T10:03:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1009-3",
+    "deal_id": "D-1009",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-31T11:03:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1009-4",
+    "deal_id": "D-1009",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-25T14:03:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1010-1",
+    "deal_id": "D-1010",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-15T04:34:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "We need confirmation before the ROFR deadline expires."
+  },
+  {
+    "message_id": "MSG-D-1010-2",
+    "deal_id": "D-1010",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-16T17:34:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1010-3",
+    "deal_id": "D-1010",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-16T20:34:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1010-4",
+    "deal_id": "D-1010",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-15T22:34:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "We need confirmation before the ROFR deadline expires."
+  },
+  {
+    "message_id": "MSG-D-1011-1",
+    "deal_id": "D-1011",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-19T06:58:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1011-2",
+    "deal_id": "D-1011",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-19T08:58:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1011-3",
+    "deal_id": "D-1011",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-16T15:58:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1012-1",
+    "deal_id": "D-1012",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-03-30T13:15:00",
+    "subject": "Re: Rippling secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1012-2",
+    "deal_id": "D-1012",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-31T06:15:00",
+    "subject": "Re: Rippling secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1013-1",
+    "deal_id": "D-1013",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-02T10:33:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1013-2",
+    "deal_id": "D-1013",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-30T11:33:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1013-3",
+    "deal_id": "D-1013",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-04T00:33:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1014-1",
+    "deal_id": "D-1014",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-28T18:51:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1014-2",
+    "deal_id": "D-1014",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-28T05:51:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1015-1",
+    "deal_id": "D-1015",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-21T15:22:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1015-2",
+    "deal_id": "D-1015",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-23T06:22:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "We still have not received the seller consent required to proceed."
+  },
+  {
+    "message_id": "MSG-D-1016-1",
+    "deal_id": "D-1016",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-06T07:54:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1016-2",
+    "deal_id": "D-1016",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-06T05:54:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "We need confirmation before the ROFR deadline expires."
+  },
+  {
+    "message_id": "MSG-D-1017-1",
+    "deal_id": "D-1017",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-10T06:31:00",
+    "subject": "Re: Airtable secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1017-2",
+    "deal_id": "D-1017",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-12T08:31:00",
+    "subject": "Re: Airtable secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1017-3",
+    "deal_id": "D-1017",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-12T16:31:00",
+    "subject": "Re: Airtable secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1018-1",
+    "deal_id": "D-1018",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-04T02:02:00",
+    "subject": "Re: Databricks secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1018-2",
+    "deal_id": "D-1018",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-07T01:02:00",
+    "subject": "Re: Databricks secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1018-3",
+    "deal_id": "D-1018",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-06T13:02:00",
+    "subject": "Re: Databricks secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1019-1",
+    "deal_id": "D-1019",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-27T21:32:00",
+    "subject": "Re: Canva secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1019-2",
+    "deal_id": "D-1019",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-25T19:32:00",
+    "subject": "Re: Canva secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1019-3",
+    "deal_id": "D-1019",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-28T11:32:00",
+    "subject": "Re: Canva secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1020-1",
+    "deal_id": "D-1020",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-09T11:20:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Please note the ROFR response window closes tomorrow."
+  },
+  {
+    "message_id": "MSG-D-1020-2",
+    "deal_id": "D-1020",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-11T16:20:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1020-3",
+    "deal_id": "D-1020",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-05T11:20:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Can you resend the accreditation letter? We do not see it in the package."
+  },
+  {
+    "message_id": "MSG-D-1021-1",
+    "deal_id": "D-1021",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-06T07:17:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1021-2",
+    "deal_id": "D-1021",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-11T05:17:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1021-3",
+    "deal_id": "D-1021",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-08T14:17:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1021-4",
+    "deal_id": "D-1021",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-07T04:17:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1022-1",
+    "deal_id": "D-1022",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-24T23:55:00",
+    "subject": "Re: Canva secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1022-2",
+    "deal_id": "D-1022",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-21T08:55:00",
+    "subject": "Re: Canva secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1022-3",
+    "deal_id": "D-1022",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-26T18:55:00",
+    "subject": "Re: Canva secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1022-4",
+    "deal_id": "D-1022",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-25T02:55:00",
+    "subject": "Re: Canva secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1023-1",
+    "deal_id": "D-1023",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-18T19:52:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1023-2",
+    "deal_id": "D-1023",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-16T18:52:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1024-1",
+    "deal_id": "D-1024",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-05T05:23:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1024-2",
+    "deal_id": "D-1024",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-31T16:23:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1024-3",
+    "deal_id": "D-1024",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-02T11:23:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1024-4",
+    "deal_id": "D-1024",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-04T18:23:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1025-1",
+    "deal_id": "D-1025",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-23T23:11:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1025-2",
+    "deal_id": "D-1025",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-03-25T15:11:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1026-1",
+    "deal_id": "D-1026",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-11T10:36:00",
+    "subject": "Re: Plaid secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1026-2",
+    "deal_id": "D-1026",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-12T16:36:00",
+    "subject": "Re: Plaid secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1026-3",
+    "deal_id": "D-1026",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-13T03:36:00",
+    "subject": "Re: Plaid secondary transaction",
+    "body": "The share count in the agreement looks different from what we discussed earlier."
+  },
+  {
+    "message_id": "MSG-D-1027-1",
+    "deal_id": "D-1027",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-02T15:49:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1027-2",
+    "deal_id": "D-1027",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-31T18:49:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1027-3",
+    "deal_id": "D-1027",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-27T19:49:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1027-4",
+    "deal_id": "D-1027",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-27T03:49:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "The share count in the agreement looks different from what we discussed earlier."
+  },
+  {
+    "message_id": "MSG-D-1028-1",
+    "deal_id": "D-1028",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-13T04:34:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1028-2",
+    "deal_id": "D-1028",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-06T11:34:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1028-3",
+    "deal_id": "D-1028",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-08T13:34:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1029-1",
+    "deal_id": "D-1029",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-22T12:04:00",
+    "subject": "Re: Chime secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1029-2",
+    "deal_id": "D-1029",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-25T17:04:00",
+    "subject": "Re: Chime secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1030-1",
+    "deal_id": "D-1030",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-13T19:55:00",
+    "subject": "Re: Scale AI secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1030-2",
+    "deal_id": "D-1030",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-11T22:55:00",
+    "subject": "Re: Scale AI secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1031-1",
+    "deal_id": "D-1031",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-18T10:33:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1031-2",
+    "deal_id": "D-1031",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-14T23:33:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1031-3",
+    "deal_id": "D-1031",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-17T05:33:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1032-1",
+    "deal_id": "D-1032",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-13T16:10:00",
+    "subject": "Re: Scale AI secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1032-2",
+    "deal_id": "D-1032",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-14T10:10:00",
+    "subject": "Re: Scale AI secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1033-1",
+    "deal_id": "D-1033",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-03T17:26:00",
+    "subject": "Re: Rippling secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1033-2",
+    "deal_id": "D-1033",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-29T06:26:00",
+    "subject": "Re: Rippling secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1033-3",
+    "deal_id": "D-1033",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-01T06:26:00",
+    "subject": "Re: Rippling secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1034-1",
+    "deal_id": "D-1034",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-17T02:51:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1034-2",
+    "deal_id": "D-1034",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-20T19:51:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1034-3",
+    "deal_id": "D-1034",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-16T09:51:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1035-1",
+    "deal_id": "D-1035",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-10T23:09:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1035-2",
+    "deal_id": "D-1035",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-07T10:09:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1035-3",
+    "deal_id": "D-1035",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-06T00:09:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1036-1",
+    "deal_id": "D-1036",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-04T15:20:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Legal noted a discrepancy in the entity name across the documents."
+  },
+  {
+    "message_id": "MSG-D-1036-2",
+    "deal_id": "D-1036",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-05T08:20:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1036-3",
+    "deal_id": "D-1036",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-07T11:20:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1037-1",
+    "deal_id": "D-1037",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-06T02:57:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1037-2",
+    "deal_id": "D-1037",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-08T08:57:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1037-3",
+    "deal_id": "D-1037",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-06T20:57:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1038-1",
+    "deal_id": "D-1038",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-16T01:01:00",
+    "subject": "Re: Anduril secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1038-2",
+    "deal_id": "D-1038",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-15T18:01:00",
+    "subject": "Re: Anduril secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1038-3",
+    "deal_id": "D-1038",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-16T17:01:00",
+    "subject": "Re: Anduril secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1038-4",
+    "deal_id": "D-1038",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-12T20:01:00",
+    "subject": "Re: Anduril secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1039-1",
+    "deal_id": "D-1039",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-22T16:17:00",
+    "subject": "Re: Airtable secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1039-2",
+    "deal_id": "D-1039",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-26T22:17:00",
+    "subject": "Re: Airtable secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1040-1",
+    "deal_id": "D-1040",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-26T02:45:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1040-2",
+    "deal_id": "D-1040",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-29T03:45:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1040-3",
+    "deal_id": "D-1040",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-23T10:45:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1041-1",
+    "deal_id": "D-1041",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-22T04:04:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "The share count in the agreement looks different from what we discussed earlier."
+  },
+  {
+    "message_id": "MSG-D-1041-2",
+    "deal_id": "D-1041",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-03-26T12:04:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "The share count in the agreement looks different from what we discussed earlier."
+  },
+  {
+    "message_id": "MSG-D-1041-3",
+    "deal_id": "D-1041",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-21T02:04:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1042-1",
+    "deal_id": "D-1042",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-01T10:22:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1042-2",
+    "deal_id": "D-1042",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-05T16:22:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1042-3",
+    "deal_id": "D-1042",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-08T00:22:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1042-4",
+    "deal_id": "D-1042",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-03T13:22:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1043-1",
+    "deal_id": "D-1043",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-05T19:01:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1043-2",
+    "deal_id": "D-1043",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-01T07:01:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1043-3",
+    "deal_id": "D-1043",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-05T02:01:00",
+    "subject": "Re: Notion secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1044-1",
+    "deal_id": "D-1044",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-11T06:47:00",
+    "subject": "Re: Databricks secondary transaction",
+    "body": "The share count in the agreement looks different from what we discussed earlier."
+  },
+  {
+    "message_id": "MSG-D-1044-2",
+    "deal_id": "D-1044",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-10T15:47:00",
+    "subject": "Re: Databricks secondary transaction",
+    "body": "Legal noted a discrepancy in the entity name across the documents."
+  },
+  {
+    "message_id": "MSG-D-1044-3",
+    "deal_id": "D-1044",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-09T14:47:00",
+    "subject": "Re: Databricks secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1044-4",
+    "deal_id": "D-1044",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-12T12:47:00",
+    "subject": "Re: Databricks secondary transaction",
+    "body": "Legal noted a discrepancy in the entity name across the documents."
+  },
+  {
+    "message_id": "MSG-D-1045-1",
+    "deal_id": "D-1045",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-08T19:22:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1045-2",
+    "deal_id": "D-1045",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-07T21:22:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1045-3",
+    "deal_id": "D-1045",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-06T18:22:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1045-4",
+    "deal_id": "D-1045",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-07T22:22:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1046-1",
+    "deal_id": "D-1046",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-01T10:14:00",
+    "subject": "Re: Stripe secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1046-2",
+    "deal_id": "D-1046",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-03-29T15:14:00",
+    "subject": "Re: Stripe secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1047-1",
+    "deal_id": "D-1047",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-31T11:18:00",
+    "subject": "Re: Anduril secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1047-2",
+    "deal_id": "D-1047",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-01T05:18:00",
+    "subject": "Re: Anduril secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1047-3",
+    "deal_id": "D-1047",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-28T23:18:00",
+    "subject": "Re: Anduril secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1047-4",
+    "deal_id": "D-1047",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-03T01:18:00",
+    "subject": "Re: Anduril secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1048-1",
+    "deal_id": "D-1048",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-17T00:01:00",
+    "subject": "Re: Ramp secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1048-2",
+    "deal_id": "D-1048",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-18T06:01:00",
+    "subject": "Re: Ramp secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1048-3",
+    "deal_id": "D-1048",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-13T23:01:00",
+    "subject": "Re: Ramp secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1049-1",
+    "deal_id": "D-1049",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-03T01:33:00",
+    "subject": "Re: Plaid secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1049-2",
+    "deal_id": "D-1049",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-30T05:33:00",
+    "subject": "Re: Plaid secondary transaction",
+    "body": "The share count in the agreement looks different from what we discussed earlier."
+  },
+  {
+    "message_id": "MSG-D-1050-1",
+    "deal_id": "D-1050",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-29T12:03:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1050-2",
+    "deal_id": "D-1050",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-24T23:03:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1050-3",
+    "deal_id": "D-1050",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-29T20:03:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "Legal noted a discrepancy in the entity name across the documents."
+  },
+  {
+    "message_id": "MSG-D-1050-4",
+    "deal_id": "D-1050",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-26T13:03:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "The share count in the agreement looks different from what we discussed earlier."
+  },
+  {
+    "message_id": "MSG-D-1051-1",
+    "deal_id": "D-1051",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-29T21:14:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "The share count in the agreement looks different from what we discussed earlier."
+  },
+  {
+    "message_id": "MSG-D-1051-2",
+    "deal_id": "D-1051",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-04T05:14:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1051-3",
+    "deal_id": "D-1051",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-03T13:14:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Please note the ROFR response window closes tomorrow."
+  },
+  {
+    "message_id": "MSG-D-1052-1",
+    "deal_id": "D-1052",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-20T11:07:00",
+    "subject": "Re: Perplexity secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1052-2",
+    "deal_id": "D-1052",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-13T23:07:00",
+    "subject": "Re: Perplexity secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1053-1",
+    "deal_id": "D-1053",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-03T02:37:00",
+    "subject": "Re: Canva secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1053-2",
+    "deal_id": "D-1053",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-04T12:37:00",
+    "subject": "Re: Canva secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1053-3",
+    "deal_id": "D-1053",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-31T01:37:00",
+    "subject": "Re: Canva secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1053-4",
+    "deal_id": "D-1053",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-05T04:37:00",
+    "subject": "Re: Canva secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1054-1",
+    "deal_id": "D-1054",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-01T04:29:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1054-2",
+    "deal_id": "D-1054",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-31T17:29:00",
+    "subject": "Re: Figma secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1055-1",
+    "deal_id": "D-1055",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-10T02:03:00",
+    "subject": "Re: Perplexity secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1055-2",
+    "deal_id": "D-1055",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-10T14:03:00",
+    "subject": "Re: Perplexity secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1056-1",
+    "deal_id": "D-1056",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-07T09:40:00",
+    "subject": "Re: Rippling secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1056-2",
+    "deal_id": "D-1056",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-07T03:40:00",
+    "subject": "Re: Rippling secondary transaction",
+    "body": "Can you resend the accreditation letter? We do not see it in the package."
+  },
+  {
+    "message_id": "MSG-D-1056-3",
+    "deal_id": "D-1056",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-07T10:40:00",
+    "subject": "Re: Rippling secondary transaction",
+    "body": "Legal noted a discrepancy in the entity name across the documents."
+  },
+  {
+    "message_id": "MSG-D-1057-1",
+    "deal_id": "D-1057",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-03-30T23:32:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1057-2",
+    "deal_id": "D-1057",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-03T00:32:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1057-3",
+    "deal_id": "D-1057",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-31T09:32:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1057-4",
+    "deal_id": "D-1057",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-30T19:32:00",
+    "subject": "Re: SpaceX secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1058-1",
+    "deal_id": "D-1058",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-13T08:35:00",
+    "subject": "Re: Chime secondary transaction",
+    "body": "Can you resend the accreditation letter? We do not see it in the package."
+  },
+  {
+    "message_id": "MSG-D-1058-2",
+    "deal_id": "D-1058",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-11T19:35:00",
+    "subject": "Re: Chime secondary transaction",
+    "body": "We still have not received the seller consent required to proceed."
+  },
+  {
+    "message_id": "MSG-D-1058-3",
+    "deal_id": "D-1058",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-14T06:35:00",
+    "subject": "Re: Chime secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1059-1",
+    "deal_id": "D-1059",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-04T17:06:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1059-2",
+    "deal_id": "D-1059",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-07T23:06:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1060-1",
+    "deal_id": "D-1060",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-14T15:13:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "Can you resend the accreditation letter? We do not see it in the package."
+  },
+  {
+    "message_id": "MSG-D-1060-2",
+    "deal_id": "D-1060",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-19T03:13:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "Can you resend the accreditation letter? We do not see it in the package."
+  },
+  {
+    "message_id": "MSG-D-1060-3",
+    "deal_id": "D-1060",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-18T19:13:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1060-4",
+    "deal_id": "D-1060",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-14T02:13:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "We still have not received the seller consent required to proceed."
+  },
+  {
+    "message_id": "MSG-D-1061-1",
+    "deal_id": "D-1061",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-16T13:36:00",
+    "subject": "Re: Stripe secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1061-2",
+    "deal_id": "D-1061",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-19T21:36:00",
+    "subject": "Re: Stripe secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1062-1",
+    "deal_id": "D-1062",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-14T06:09:00",
+    "subject": "Re: Ramp secondary transaction",
+    "body": "We still have not received the seller consent required to proceed."
+  },
+  {
+    "message_id": "MSG-D-1062-2",
+    "deal_id": "D-1062",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-14T13:09:00",
+    "subject": "Re: Ramp secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1062-3",
+    "deal_id": "D-1062",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-18T12:09:00",
+    "subject": "Re: Ramp secondary transaction",
+    "body": "We still have not received the seller consent required to proceed."
+  },
+  {
+    "message_id": "MSG-D-1062-4",
+    "deal_id": "D-1062",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-18T04:09:00",
+    "subject": "Re: Ramp secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1063-1",
+    "deal_id": "D-1063",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-18T02:21:00",
+    "subject": "Re: Ramp secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1063-2",
+    "deal_id": "D-1063",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-12T08:21:00",
+    "subject": "Re: Ramp secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1063-3",
+    "deal_id": "D-1063",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-04-17T23:21:00",
+    "subject": "Re: Ramp secondary transaction",
+    "body": "Legal noted a discrepancy in the entity name across the documents."
+  },
+  {
+    "message_id": "MSG-D-1064-1",
+    "deal_id": "D-1064",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-30T00:12:00",
+    "subject": "Re: Airtable secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1064-2",
+    "deal_id": "D-1064",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-24T12:12:00",
+    "subject": "Re: Airtable secondary transaction",
+    "body": "Can you resend the accreditation letter? We do not see it in the package."
+  },
+  {
+    "message_id": "MSG-D-1064-3",
+    "deal_id": "D-1064",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-24T19:12:00",
+    "subject": "Re: Airtable secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1065-1",
+    "deal_id": "D-1065",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-31T12:04:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1065-2",
+    "deal_id": "D-1065",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-30T00:04:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1065-3",
+    "deal_id": "D-1065",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-02T13:04:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1066-1",
+    "deal_id": "D-1066",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-27T20:42:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1066-2",
+    "deal_id": "D-1066",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-03-25T14:42:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "The share count in the agreement looks different from what we discussed earlier."
+  },
+  {
+    "message_id": "MSG-D-1067-1",
+    "deal_id": "D-1067",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-15T14:20:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1067-2",
+    "deal_id": "D-1067",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-16T16:20:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1067-3",
+    "deal_id": "D-1067",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-13T06:20:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1068-1",
+    "deal_id": "D-1068",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-17T12:03:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1068-2",
+    "deal_id": "D-1068",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-18T04:03:00",
+    "subject": "Re: Discord secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1069-1",
+    "deal_id": "D-1069",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-03-24T02:01:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "We still have not received the seller consent required to proceed."
+  },
+  {
+    "message_id": "MSG-D-1069-2",
+    "deal_id": "D-1069",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-25T12:01:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "Can you resend the accreditation letter? We do not see it in the package."
+  },
+  {
+    "message_id": "MSG-D-1069-3",
+    "deal_id": "D-1069",
+    "channel": "email",
+    "sender_role": "legal",
+    "timestamp": "2026-03-24T16:01:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "We still have not received the seller consent required to proceed."
+  },
+  {
+    "message_id": "MSG-D-1070-1",
+    "deal_id": "D-1070",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-03-24T10:35:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "We are still waiting on internal approval and may need more time."
+  },
+  {
+    "message_id": "MSG-D-1070-2",
+    "deal_id": "D-1070",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-03-30T11:35:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1070-3",
+    "deal_id": "D-1070",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-03-30T09:35:00",
+    "subject": "Re: Anthropic secondary transaction",
+    "body": "Can you resend the accreditation letter? We do not see it in the package."
+  },
+  {
+    "message_id": "MSG-D-1071-1",
+    "deal_id": "D-1071",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-16T07:19:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1071-2",
+    "deal_id": "D-1071",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-16T11:19:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "Legal noted a discrepancy in the entity name across the documents."
+  },
+  {
+    "message_id": "MSG-D-1071-3",
+    "deal_id": "D-1071",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-15T00:19:00",
+    "subject": "Re: Brex secondary transaction",
+    "body": "The share count in the agreement looks different from what we discussed earlier."
+  },
+  {
+    "message_id": "MSG-D-1072-1",
+    "deal_id": "D-1072",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-10T22:02:00",
+    "subject": "Re: Stripe secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1072-2",
+    "deal_id": "D-1072",
+    "channel": "email",
+    "sender_role": "sales",
+    "timestamp": "2026-04-12T16:02:00",
+    "subject": "Re: Stripe secondary transaction",
+    "body": "This has been sitting with legal review for several days."
+  },
+  {
+    "message_id": "MSG-D-1073-1",
+    "deal_id": "D-1073",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-15T16:53:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1073-2",
+    "deal_id": "D-1073",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-13T16:53:00",
+    "subject": "Re: OpenAI secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1074-1",
+    "deal_id": "D-1074",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-16T09:14:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1074-2",
+    "deal_id": "D-1074",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-16T23:14:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Buyer is aligned on pricing and is waiting on the final signature package."
+  },
+  {
+    "message_id": "MSG-D-1074-3",
+    "deal_id": "D-1074",
+    "channel": "email",
+    "sender_role": "transaction_services",
+    "timestamp": "2026-04-17T09:14:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1074-4",
+    "deal_id": "D-1074",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-15T04:14:00",
+    "subject": "Re: Epic Games secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1075-1",
+    "deal_id": "D-1075",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-03-30T07:57:00",
+    "subject": "Re: Databricks secondary transaction",
+    "body": "Can you resend the accreditation letter? We do not see it in the package."
+  },
+  {
+    "message_id": "MSG-D-1075-2",
+    "deal_id": "D-1075",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-02T22:57:00",
+    "subject": "Re: Databricks secondary transaction",
+    "body": "Thanks, we have reviewed the latest package and will revert shortly."
+  },
+  {
+    "message_id": "MSG-D-1075-3",
+    "deal_id": "D-1075",
+    "channel": "email",
+    "sender_role": "buyer",
+    "timestamp": "2026-04-02T22:57:00",
+    "subject": "Re: Databricks secondary transaction",
+    "body": "Please share the updated agreement when ready."
+  },
+  {
+    "message_id": "MSG-D-1075-4",
+    "deal_id": "D-1075",
+    "channel": "email",
+    "sender_role": "seller",
+    "timestamp": "2026-04-01T05:57:00",
+    "subject": "Re: Databricks secondary transaction",
+    "body": "We still have not received the seller consent required to proceed."
+  }
+]
