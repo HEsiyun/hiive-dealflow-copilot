@@ -9,6 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.services.audit_builder import build_audit_trail
 from app.services.escalation import compute_escalation
+from app.scoring.readiness_scoring import compute_readiness
 import os
 
 app = FastAPI()
@@ -67,9 +68,12 @@ def analyze_deal(deal_id: str, force_fallback: bool = False):
     # llm layer
     llm_results = analyze_with_llm(ctx, rule_results, force_fallback)
 
-    # scoring
+    # risk scoring
     score, level = compute_risk(rule_results, llm_results)
-
+   
+    # readiness scoring
+    readiness = compute_readiness(rule_results, llm_results)
+   
     # escalation
     escalation = compute_escalation(rule_results)
 
@@ -79,6 +83,10 @@ def analyze_deal(deal_id: str, force_fallback: bool = False):
         "deal_id": deal_id,
         "risk_score": score,
         "risk_level": level,
+
+        "readiness_score": readiness["readiness_score"],
+        "readiness_status": readiness.get("readiness_status", "unknown"),
+        "readiness_reasons": readiness["readiness_reasons"],
 
         # explainability
         "rule_issues": rule_results,
