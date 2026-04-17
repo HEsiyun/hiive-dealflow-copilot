@@ -8,6 +8,7 @@ from app.scoring.risk_scoring import compute_risk
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.services.audit_builder import build_audit_trail
+from app.services.escalation import compute_escalation
 import os
 
 app = FastAPI()
@@ -69,6 +70,9 @@ def analyze_deal(deal_id: str, force_fallback: bool = False):
     # scoring
     score, level = compute_risk(rule_results, llm_results)
 
+    # escalation
+    escalation = compute_escalation(rule_results)
+
     # audit trail
     audit = build_audit_trail(ctx, rule_results, llm_results, score, level)
     return {
@@ -84,6 +88,9 @@ def analyze_deal(deal_id: str, force_fallback: bool = False):
         "llm_summary": llm_results.get("summary"),
         "blockers": llm_results.get("blockers", []),
         "next_action": llm_results.get("next_action"),
+
+        # escalation（action layer）
+        "escalation": escalation,
 
         # metadata
         "source": llm_results.get("source", "unknown"),

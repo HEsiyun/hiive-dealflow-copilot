@@ -28,12 +28,17 @@ export default function EmailGenerator({ data }: any) {
       </button>
 
       {email && (
-        <textarea
-          className="w-full border p-2 rounded"
-          rows={6}
-          value={email}
-          readOnly
-        />
+        <div className="border p-4 rounded bg-white">
+            <div className="text-sm text-gray-500 mb-2">Subject</div>
+
+            <div className="font-medium mb-4">
+                {email?.split("\n")[0]}
+            </div>
+
+            <div className="whitespace-pre-line text-sm">
+                {email}
+            </div>
+        </div>
       )}
     </div>
   );

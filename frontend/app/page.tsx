@@ -193,7 +193,16 @@ export default function Home() {
                 <CrossDocViz data={data.rule_issues.cross_doc_mismatch} />
               </div>
             </div>
-
+            
+            {/* ESCALATION */}
+            {data.escalation?.needed && (
+              <div className="border p-4 rounded bg-red-50">
+                <h2 className="font-semibold text-red-700">Escalation Needed</h2>
+                <p>Owner: {data.escalation.owner}</p>
+                <p>Reason: {data.escalation.reason}</p>
+              </div>
+            )}
+            
             {/* NEXT ACTION */}
             <div className="border p-4 rounded">
               <h2 className="font-semibold mb-2">Next Action</h2>
