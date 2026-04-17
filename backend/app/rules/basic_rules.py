@@ -31,13 +31,53 @@ def check_field_mismatch(ctx: DealContext):
         fields = doc.extracted_fields
 
         if "share_count" in fields and fields["share_count"] != ctx.deal.share_count:
-            mismatches.append("share_count_mismatch")
+            mismatches.append({
+                "type": "share_count_mismatch",
+                "document_id": doc.document_id,
+                "expected": ctx.deal.share_count,
+                "actual": fields["share_count"]
+            })
 
         if "seller_legal_name" in fields and fields["seller_legal_name"] != ctx.seller.name:
-            mismatches.append("seller_name_mismatch")
+            mismatches.append({
+                "type": "seller_name_mismatch",
+                "document_id": doc.document_id,
+                "expected": ctx.seller.name,
+                "actual": fields["seller_legal_name"]
+            })
 
     return mismatches
 
+def check_cross_doc_consistency(ctx):
+    value_map = {}
+
+    for doc in ctx.documents:
+        if "share_count" in doc.extracted_fields:
+            val = doc.extracted_fields["share_count"]
+            if val not in value_map:
+                value_map[val] = []
+            value_map[val].append(doc.document_id)
+
+    if len(value_map) > 1:
+        groups = [
+            {
+                "value": v,
+                "document_ids": ids
+            }
+            for v, ids in value_map.items()
+        ]
+
+        groups = sorted(groups, key=lambda x: len(x["document_ids"]), reverse=True)
+
+        return {
+            "type": "cross_document_mismatch",
+            "groups": groups,
+            "majority_value": groups[0]["value"],
+            "outlier_values": [g["value"] for g in groups[1:]],
+            "severity": "high" if len(groups) > 2 else "medium"
+        }
+
+    return None
 
 def check_kyc_status(ctx: DealContext):
     issues = []
@@ -53,5 +93,6 @@ def run_all_checks(ctx: DealContext):
         "missing_documents": check_missing_documents(ctx),
         "sla_breach": check_sla_breach(ctx),
         "field_mismatches": check_field_mismatch(ctx),
+        "cross_doc_mismatch": check_cross_doc_consistency(ctx),
         "kyc_issues": check_kyc_status(ctx),
     }
