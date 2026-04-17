@@ -293,6 +293,32 @@ export default function Home() {
                 </div>
               )}
             </div>
+            {data.rule_issues?.stage_conflicts?.length > 0 && (
+            <div className="border p-4 rounded bg-red-50">
+              <h2 className="font-semibold text-red-700 mb-2">
+                ⚠ Stage Readiness Conflict
+              </h2>
+
+              <ul className="list-disc pl-5 text-sm">
+                {data.rule_issues.stage_conflicts.map((c: string, i: number) => (
+                  <li key={i}>{c}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {data.rule_issues?.communication_flags?.length > 0 && (
+          <div className="border p-4 rounded bg-yellow-50">
+            <h2 className="font-semibold mb-2">
+              Communication Signals
+            </h2>
+
+            <ul className="list-disc pl-5 text-sm">
+              {data.rule_issues.communication_flags.map((f: string, i: number) => (
+                <li key={i}>{f}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
             {/* SUMMARY */}
             <div className="border p-4 rounded bg-white">

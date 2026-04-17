@@ -88,11 +88,65 @@ def check_kyc_status(ctx: DealContext):
     return issues
 
 
+def check_accreditation_status(ctx: DealContext):
+    issues = []
+
+    if ctx.buyer.accredited_investor_status != "verified":
+        issues.append("buyer_not_accredited")
+
+    if ctx.seller.accredited_investor_status != "verified":
+        issues.append("seller_not_accredited")
+
+    return issues
+
+def check_stage_readiness_conflict(ctx: DealContext, rule_results):
+    conflicts = []
+
+    stage = ctx.deal.current_stage.lower()
+
+    # If the deal has progressed to a late stage but KYC is not completed
+    if stage in ["signature", "settlement", "closed"]:
+        if rule_results.get("kyc_issues"):
+            conflicts.append("kyc_incomplete_but_deal_advanced")
+
+    # If there are document inconsistencies but the deal continues to progress
+    if rule_results.get("cross_doc_mismatch") and stage in ["signature", "settlement"]:
+        conflicts.append("document_conflict_not_resolved")
+
+    # If required documents are missing but the deal has reached a late stage
+    if rule_results.get("missing_documents") and stage in ["signature", "settlement"]:
+        conflicts.append("missing_docs_but_deal_advanced")
+
+    return conflicts
+
+
+def check_communication_blockers(ctx: DealContext):
+    keywords = ["waiting", "missing", "issue", "delay", "consent", "approval"]
+
+    blockers = []
+
+    for c in ctx.communications:
+        body = c.body.lower()
+        for kw in keywords:
+            if kw in body:
+                blockers.append(f"communication_mentions_{kw}")
+                break
+
+    return blockers
+
 def run_all_checks(ctx: DealContext):
-    return {
+
+    results = {
         "missing_documents": check_missing_documents(ctx),
         "sla_breach": check_sla_breach(ctx),
         "field_mismatches": check_field_mismatch(ctx),
         "cross_doc_mismatch": check_cross_doc_consistency(ctx),
         "kyc_issues": check_kyc_status(ctx),
+        "accreditation_issues": check_accreditation_status(ctx),
+        "communication_flags": check_communication_blockers(ctx),
     }
+
+    # stage readiness
+    results["stage_conflicts"] = check_stage_readiness_conflict(ctx, results)
+
+    return results
