@@ -36,7 +36,7 @@ def analyze_deal(deal_id: str):
     ctx = builder.build(deal_id)
 
     rule_results = run_all_checks(ctx)
-    llm_results = analyze_with_llm(ctx)
+    llm_results = analyze_with_llm(ctx, rule_results)
 
     score, level = compute_risk(rule_results, llm_results)
 

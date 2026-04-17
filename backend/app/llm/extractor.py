@@ -1,8 +1,12 @@
 from typing import List
 from app.services.deal_context import DealContext
+from openai import OpenAI
+import json
 
+client = OpenAI()
 
-def build_llm_prompt(ctx: DealContext) -> str:
+def build_llm_prompt(ctx, rule_results) -> str:
+
     emails = "\n\n".join([
         f"[{c.sender_role}] {c.body}" for c in ctx.communications[:5]
     ])
@@ -14,15 +18,15 @@ def build_llm_prompt(ctx: DealContext) -> str:
     return f"""
 You are an AI assistant helping a transaction operations team.
 
-Analyze the following deal context and identify:
-1. Key blockers or risks
-2. Missing steps or actions
-3. What should be done next
+Your job is to analyze the deal and explain risks based on structured signals and communication context.
 
 --- DEAL ---
 Company: {ctx.deal.company_name}
 Stage: {ctx.deal.current_stage}
 Deadline: {ctx.deal.deadline_at}
+
+--- RULE-BASED FINDINGS ---
+{rule_results}
 
 --- EMAILS ---
 {emails}
@@ -30,25 +34,55 @@ Deadline: {ctx.deal.deadline_at}
 --- INTERNAL NOTES ---
 {notes}
 
-Respond in JSON format:
+Instructions:
+1. Explain the key risks clearly
+2. Reference the findings if relevant
+3. Suggest next action for the operations team
+
+Respond in JSON:
 {{
   "summary": "...",
   "blockers": ["..."],
-  "next_action": "..."
+  "next_action": "...",
+  "confidence": "high/medium/low"
 }}
 """
 
 def mock_llm_call(prompt: str):
     return {
-        "summary": "Deal appears delayed due to missing seller consent and potential document mismatch.",
+        "summary": "Multiple document inconsistencies detected. Share count differs across documents and from system records, indicating potential versioning or data integrity issues. Buyer KYC is incomplete.",
         "blockers": [
-            "Missing seller consent",
-            "Possible share count inconsistency"
+            "Conflicting share count across documents",
+            "Mismatch between documents and system-of-record",
+            "Buyer KYC incomplete"
         ],
-        "next_action": "Follow up with seller to obtain signed consent and confirm agreement details."
+        "next_action": "Identify the correct agreement version, confirm share count with counterparties, and complete buyer KYC verification.",
+        "confidence": "high"
     }
 
-def analyze_with_llm(ctx: DealContext):
-    prompt = build_llm_prompt(ctx)
-    result = mock_llm_call(prompt)
+def call_llm(prompt: str):
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "You are a transaction risk analysis assistant."},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.2
+    )
+
+    content = response.choices[0].message.content
+
+    try:
+        return json.loads(content)
+    except:
+        return {
+            "summary": content,
+            "blockers": [],
+            "next_action": "",
+            "confidence": "low"
+        }
+
+def analyze_with_llm(ctx, rule_results):
+    prompt = build_llm_prompt(ctx, rule_results)
+    result = call_llm(prompt)
     return result

@@ -9,3 +9,4 @@ dependencies:
       - uvicorn
       - pydantic
       - python-dotenv
+      - openai
