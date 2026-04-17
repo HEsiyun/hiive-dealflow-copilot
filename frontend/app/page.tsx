@@ -4,6 +4,7 @@ import { useState } from "react";
 import CrossDocViz from "@/components/CrossDocViz";
 import EmailGenerator from "@/components/EmailGenerator";
 import Timeline from "@/components/Timeline";
+import AuditPanel from "@/components/AuditPanel";
 
 const DEALS = ["D-1001", "D-1002", "D-1003", "D-1005"];
 
@@ -201,6 +202,9 @@ export default function Home() {
 
             {/* TIMELINE */}
             <Timeline events={data.stage_events || []} />
+
+            {/* AUDIT */}
+            {data.audit_trail && <AuditPanel audit={data.audit_trail} />}
 
             {/* EMAIL GENERATOR */}
             <EmailGenerator data={data} />
