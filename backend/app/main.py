@@ -32,11 +32,11 @@ def get_deal(deal_id: str):
 
 
 @app.post("/deals/{deal_id}/analyze")
-def analyze_deal(deal_id: str):
+def analyze_deal(deal_id: str, force_fallback: bool = False):
     ctx = builder.build(deal_id)
 
     rule_results = run_all_checks(ctx)
-    llm_results = analyze_with_llm(ctx, rule_results)
+    llm_results = analyze_with_llm(ctx, rule_results, force_fallback)
 
     score, level = compute_risk(rule_results, llm_results)
 

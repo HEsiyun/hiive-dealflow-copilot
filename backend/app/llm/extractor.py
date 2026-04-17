@@ -1,5 +1,6 @@
 from typing import List
 from app.services.deal_context import DealContext
+from app.services.fallback_builder import build_fallback_response
 from openai import OpenAI
 import json
 
@@ -48,17 +49,6 @@ Respond in JSON:
 }}
 """
 
-def mock_llm_call(prompt: str):
-    return {
-        "summary": "Multiple document inconsistencies detected. Share count differs across documents and from system records, indicating potential versioning or data integrity issues. Buyer KYC is incomplete.",
-        "blockers": [
-            "Conflicting share count across documents",
-            "Mismatch between documents and system-of-record",
-            "Buyer KYC incomplete"
-        ],
-        "next_action": "Identify the correct agreement version, confirm share count with counterparties, and complete buyer KYC verification.",
-        "confidence": "high"
-    }
 
 def call_llm(prompt: str):
     response = client.chat.completions.create(
@@ -82,7 +72,18 @@ def call_llm(prompt: str):
             "confidence": "low"
         }
 
-def analyze_with_llm(ctx, rule_results):
+def analyze_with_llm(ctx, rule_results, force_fallback=False):
     prompt = build_llm_prompt(ctx, rule_results)
-    result = call_llm(prompt)
-    return result
+
+    try:
+        if force_fallback:
+            raise Exception("Forced fallback for testing")
+
+        result = call_llm(prompt)
+        result["source"] = "llm"
+        return result
+
+    except Exception as e:
+        fallback = build_fallback_response(rule_results)
+        fallback["error"] = str(e)
+        return fallback
