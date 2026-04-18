@@ -23,8 +23,51 @@ def build_audit_trail(ctx, rule_results, llm_results, score, level):
                 })
 
     # ---------- KYC ----------
-    if rule_results.get("kyc_issues"):
+    for issue in rule_results.get("kyc_issues", []):
+        evidence.append({
+            "type": "kyc_issue",
+            "detail": issue
+        })
         key_risks.append("KYC incomplete")
+
+    # ---------- MISSING DOCUMENTS ----------
+    for doc in rule_results.get("missing_documents", []):
+        evidence.append({
+            "type": "missing_document",
+            "detail": doc
+        })
+
+    # ---------- SLA ----------
+    if rule_results.get("sla_breach"):
+        sla_detail = rule_results.get("sla_detail")
+        detail = "SLA breached"
+        if sla_detail:
+            detail = f"SLA breached: {sla_detail['elapsed_hours']}h elapsed (allowed {sla_detail['sla_hours']}h)"
+        evidence.append({
+            "type": "sla_breach",
+            "detail": detail
+        })
+
+    # ---------- ACCREDITATION ----------
+    for issue in rule_results.get("accreditation_issues", []):
+        evidence.append({
+            "type": "accreditation_issue",
+            "detail": issue
+        })
+
+    # ---------- STAGE CONFLICTS ----------
+    for conflict in rule_results.get("stage_conflicts", []):
+        evidence.append({
+            "type": "stage_conflict",
+            "detail": conflict
+        })
+
+    # ---------- COMMUNICATION FLAGS ----------
+    for flag in rule_results.get("communication_flags", []):
+        evidence.append({
+            "type": "communication_flag",
+            "detail": flag
+        })
 
     # ---------- LLM SIGNALS ----------
     for b in llm_results.get("blockers", []):

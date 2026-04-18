@@ -37,6 +37,7 @@ builder = DealContextBuilder(store)
 # ---------------- Schemas ----------------
 class EmailRequest(BaseModel):
     deal_id: str
+    mode: str = "internal"
 
 
 # ---------------- APIs ----------------
@@ -119,10 +120,11 @@ def generate_email(req: EmailRequest):
     rule_results = run_all_checks(ctx)
 
     try:
-        email = generate_email_with_llm(ctx, rule_results)
+        email = generate_email_with_llm(ctx, rule_results, mode=req.mode)
         return {
             "email": email,
-            "source": "llm"
+            "source": "llm",
+            "mode": req.mode
         }
 
     except Exception as e:

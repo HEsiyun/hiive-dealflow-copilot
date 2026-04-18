@@ -26,7 +26,7 @@ def format_mismatch(rule_results):
     return "\n".join(lines)
 
 
-def build_email_prompt(ctx, rule_results):
+def build_client_email_prompt(ctx, rule_results):
     mismatch_text = format_mismatch(rule_results)
 
     return f"""
@@ -52,13 +52,61 @@ Instructions:
 - Avoid generic greetings like "I hope this message finds you well"
 - Do NOT assume deal is closed unless explicitly stated
 - Sound like a transaction operations team
+- Do NOT expose internal risk scores, rule engine outputs, or analysis methodology
 
 Return plain email text.
 """
 
 
-def generate_email_with_llm(ctx: DealContext, rule_results):
-    prompt = build_email_prompt(ctx, rule_results)
+def build_internal_email_prompt(ctx, rule_results):
+    mismatch_text = format_mismatch(rule_results)
+
+    kyc_issues = rule_results.get("kyc_issues", [])
+    missing_docs = rule_results.get("missing_documents", [])
+    sla_breach = rule_results.get("sla_breach", False)
+    stage_conflicts = rule_results.get("stage_conflicts", [])
+    accreditation = rule_results.get("accreditation_issues", [])
+    comm_flags = rule_results.get("communication_flags", [])
+
+    return f"""
+You are a deal operations specialist writing an internal status summary for your team.
+
+--- DEAL ---
+Company: {ctx.deal.company_name}
+Deal ID: {ctx.deal.deal_id}
+Stage: {ctx.deal.current_stage}
+Priority: {ctx.deal.priority}
+Deadline: {ctx.deal.deadline_at}
+
+--- DOCUMENT ISSUES ---
+{mismatch_text}
+
+--- RULE ENGINE FINDINGS ---
+KYC issues: {kyc_issues}
+Missing documents: {missing_docs}
+SLA breached: {sla_breach}
+Stage conflicts: {stage_conflicts}
+Accreditation issues: {accreditation}
+Communication flags: {comm_flags}
+
+Instructions:
+- Write a concise internal summary email addressed to the deal team
+- Start with a one-line status (e.g. "Deal D-1005 requires attention before advancing to settlement")
+- List the key findings grouped by severity: blockers first, then warnings
+- End with a clear recommended action and who should own it
+- Use direct internal language, no need for external politeness
+- Reference specific document IDs and field values where relevant
+- Include SLA status if breached
+
+Return plain email text with a Subject line on the first line.
+"""
+
+
+def generate_email_with_llm(ctx: DealContext, rule_results, mode="internal"):
+    if mode == "client":
+        prompt = build_client_email_prompt(ctx, rule_results)
+    else:
+        prompt = build_internal_email_prompt(ctx, rule_results)
 
     response = client.chat.completions.create(
         model="gpt-4o-mini",

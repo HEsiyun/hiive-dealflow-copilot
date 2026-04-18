@@ -24,6 +24,20 @@ def check_sla_breach(ctx: DealContext):
     return elapsed_hours > ctx.workflow_template.sla_hours
 
 
+def get_sla_detail(ctx: DealContext):
+    if not ctx.workflow_template:
+        return None
+
+    now = datetime.utcnow()
+    elapsed_hours = (now - ctx.deal.last_stage_change_at).total_seconds() / 3600
+
+    return {
+        "sla_hours": ctx.workflow_template.sla_hours,
+        "elapsed_hours": round(elapsed_hours, 1),
+        "last_stage_change_at": ctx.deal.last_stage_change_at.isoformat(),
+    }
+
+
 def check_field_mismatch(ctx: DealContext):
     mismatches = []
 
@@ -139,6 +153,7 @@ def run_all_checks(ctx: DealContext):
     results = {
         "missing_documents": check_missing_documents(ctx),
         "sla_breach": check_sla_breach(ctx),
+        "sla_detail": get_sla_detail(ctx),
         "field_mismatches": check_field_mismatch(ctx),
         "cross_doc_mismatch": check_cross_doc_consistency(ctx),
         "kyc_issues": check_kyc_status(ctx),

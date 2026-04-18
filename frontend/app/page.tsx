@@ -43,7 +43,7 @@ export default function Home() {
   const [deals, setDeals] = useState<DealSummary[]>([]);
   const [dealsLoading, setDealsLoading] = useState(false);
   const [search, setSearch] = useState("");
-  const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(new Set());
+  const [collapsedGroups, setCollapsedGroups] = useState<Set<string> | null>(null);
 
   useEffect(() => {
     const fetchDeals = async () => {
@@ -52,6 +52,9 @@ export default function Home() {
         const res = await fetch("http://localhost:8000/deals");
         const json = await res.json();
         setDeals(json);
+        // Default all groups to collapsed
+        const stages = new Set(json.map((d: DealSummary) => d.current_stage || "Unknown"));
+        setCollapsedGroups(stages);
       } catch (err) {
         console.error("Failed to load deals", err);
       } finally {
@@ -87,7 +90,7 @@ export default function Home() {
 
   const toggleGroup = (stage: string) => {
     setCollapsedGroups((prev) => {
-      const next = new Set(prev);
+      const next = new Set(prev || []);
       if (next.has(stage)) next.delete(stage);
       else next.add(stage);
       return next;
@@ -123,19 +126,12 @@ export default function Home() {
 
   const readinessStatus = data?.readiness_status || "unknown";
 
-  const readinessBadgeClass =
+  const readinessColor =
     readinessStatus === "ready"
-      ? "bg-green-100 text-green-700"
+      ? { badge: "bg-green-100 text-green-700", bar: "bg-green-500", border: "border-l-green-500" }
       : readinessStatus === "at_risk"
-      ? "bg-yellow-100 text-yellow-700"
-      : "bg-red-100 text-red-700";
-
-  const readinessBarClass =
-    readinessStatus === "ready"
-      ? "bg-green-500"
-      : readinessStatus === "at_risk"
-      ? "bg-yellow-400"
-      : "bg-red-400";
+      ? { badge: "bg-yellow-100 text-yellow-700", bar: "bg-yellow-400", border: "border-l-yellow-400" }
+      : { badge: "bg-red-100 text-red-700", bar: "bg-red-400", border: "border-l-red-400" };
 
   const priorityBadgeClass = (priority?: string) => {
     const p = (priority || "").toLowerCase();
@@ -191,7 +187,7 @@ export default function Home() {
           )}
 
           {groupedDeals.map(([stage, stageDeals]) => {
-            const isCollapsed = collapsedGroups.has(stage);
+            const isCollapsed = collapsedGroups?.has(stage) ?? true;
             return (
               <div key={stage} className="mb-1">
                 {/* Stage group header */}
@@ -284,25 +280,28 @@ export default function Home() {
         )}
 
         {data && !loading && (
-          <div className="max-w-4xl mx-auto px-8 py-8 space-y-10">
+          <div className="max-w-5xl mx-auto px-8 py-6 space-y-6">
             {/* ── DEAL HEADER ── */}
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-xs text-slate-400 uppercase tracking-widest mb-1">Deal</p>
-                <h1 className="text-2xl font-bold text-slate-900">{data.deal_id}</h1>
+                <p className="text-xs text-slate-400 uppercase tracking-widest mb-0.5">Deal</p>
+                <h1 className="text-xl font-bold text-slate-900">{data.deal_id}</h1>
               </div>
-              <div className="flex gap-2 flex-wrap items-center">
-                <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-600 text-xs font-medium">
-                  {data.source}
-                </span>
+              <div className="flex gap-1.5 flex-wrap items-center">
                 {data.source === "fallback" && (
-                  <span className="px-2.5 py-1 rounded bg-orange-100 text-orange-700 text-xs font-medium">
+                  <span className="px-2 py-0.5 rounded bg-orange-100 text-orange-700 text-xs font-medium">
                     Fallback Mode
                   </span>
                 )}
-                <span className="px-2.5 py-1 rounded bg-yellow-100 text-yellow-700 text-xs font-medium">
-                  {data.risk_level}
-                </span>
+                {data.risk_level && (
+                  <span className={`px-2 py-0.5 rounded text-xs font-medium ${
+                    data.risk_level === "high" ? "bg-red-100 text-red-700" :
+                    data.risk_level === "medium" ? "bg-yellow-100 text-yellow-700" :
+                    "bg-green-100 text-green-700"
+                  }`}>
+                    {data.risk_level.charAt(0).toUpperCase() + data.risk_level.slice(1)} Risk
+                  </span>
+                )}
               </div>
             </div>
 
@@ -315,54 +314,43 @@ export default function Home() {
             {/* ══ GROUP 1: OVERVIEW ══ */}
             <section>
               <SectionGroupHeader label="Overview" />
-              <div className="space-y-3">
-                {/* Readiness */}
-                <div className="bg-white border border-slate-200 rounded-lg p-4">
-                  <div className="flex justify-between items-center mb-3">
-                    <h2 className="text-sm font-semibold text-slate-800">Deal Readiness</h2>
-                    <span
-                      className={`px-2.5 py-1 rounded text-xs font-semibold ${readinessBadgeClass}`}
-                    >
-                      {readinessStatus.toUpperCase()}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                      <div
-                        className={`h-1.5 rounded-full transition-all ${readinessBarClass}`}
-                        style={{ width: `${data.readiness_score ?? 0}%` }}
-                      />
-                    </div>
-                    <span className="text-sm font-semibold text-slate-700 tabular-nums w-16 text-right">
-                      {data.readiness_score ?? 0} / 100
-                    </span>
-                  </div>
-                  {data.readiness_reasons?.length > 0 && (
-                    <>
-                      <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1.5">
-                        Gaps
-                      </p>
-                      <ul className="space-y-1">
-                        {data.readiness_reasons.map((r: string, i: number) => (
-                          <li key={i} className="text-sm text-slate-600 flex gap-2">
-                            <span className="text-red-400 shrink-0">•</span>
-                            {r}
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
+              {/* Readiness — vivid left border accent */}
+              <div className={`bg-white border border-slate-200 border-l-4 ${readinessColor.border} rounded-lg p-4 mb-3`}>
+                <div className="flex justify-between items-center mb-2">
+                  <h2 className="text-sm font-semibold text-slate-800">Deal Readiness</h2>
+                  <span className={`px-2 py-0.5 rounded text-xs font-semibold ${readinessColor.badge}`}>
+                    {readinessStatus.toUpperCase()}
+                  </span>
                 </div>
-
-                {/* Summary */}
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                    <div
+                      className={`h-1.5 rounded-full transition-all ${readinessColor.bar}`}
+                      style={{ width: `${data.readiness_score ?? 0}%` }}
+                    />
+                  </div>
+                  <span className="text-sm font-semibold text-slate-700 tabular-nums w-16 text-right">
+                    {data.readiness_score ?? 0}/100
+                  </span>
+                </div>
+                {data.readiness_reasons?.length > 0 && (
+                  <ul className="space-y-0.5 mt-1">
+                    {data.readiness_reasons.map((r: string, i: number) => (
+                      <li key={i} className="text-xs text-slate-500 flex gap-1.5">
+                        <span className="text-red-400 shrink-0">•</span>{r}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+              {/* Summary + Next Action side by side */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div className="bg-white border border-slate-200 rounded-lg p-4">
-                  <h2 className="text-sm font-semibold text-slate-800 mb-2">Summary</h2>
+                  <h2 className="text-sm font-semibold text-slate-800 mb-1.5">Summary</h2>
                   <p className="text-sm text-slate-600 leading-relaxed">{data.llm_summary}</p>
                 </div>
-
-                {/* Next Action */}
                 <div className="bg-white border border-slate-200 rounded-lg p-4">
-                  <h2 className="text-sm font-semibold text-slate-800 mb-2">Next Action</h2>
+                  <h2 className="text-sm font-semibold text-slate-800 mb-1.5">Next Action</h2>
                   <p className="text-sm text-slate-600">{data.next_action}</p>
                 </div>
               </div>
@@ -372,152 +360,149 @@ export default function Home() {
             <section>
               <SectionGroupHeader label="Risk & Compliance" />
               <div className="space-y-3">
-                {/* Stage Conflicts */}
-                {data.rule_issues?.stage_conflicts?.length > 0 && (
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                    <h2 className="text-sm font-semibold text-red-700 mb-2">
-                      Stage Readiness Conflict
-                    </h2>
-                    <ul className="space-y-1">
-                      {data.rule_issues.stage_conflicts.map((c: string, i: number) => (
-                        <li key={i} className="text-sm text-red-600 flex gap-2">
-                          <span className="shrink-0">•</span>
-                          {c}
-                        </li>
-                      ))}
-                    </ul>
+                {/* Alerts row — stage conflicts + communication signals */}
+                {(data.rule_issues?.stage_conflicts?.length > 0 || data.rule_issues?.communication_flags?.length > 0) && (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {data.rule_issues?.stage_conflicts?.length > 0 && (
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <h2 className="text-xs font-semibold text-red-700 mb-1.5 uppercase tracking-wide">
+                          Stage Conflict
+                        </h2>
+                        <ul className="space-y-0.5">
+                          {data.rule_issues.stage_conflicts.map((c: string, i: number) => (
+                            <li key={i} className="text-sm text-red-600 flex gap-1.5">
+                              <span className="shrink-0">•</span>{c}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {data.rule_issues?.communication_flags?.length > 0 && (
+                      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                        <h2 className="text-xs font-semibold text-yellow-800 mb-1.5 uppercase tracking-wide">
+                          Comm Signals
+                        </h2>
+                        <ul className="space-y-0.5">
+                          {data.rule_issues.communication_flags.map((f: string, i: number) => (
+                            <li key={i} className="text-sm text-yellow-700 flex gap-1.5">
+                              <span className="shrink-0">•</span>{f}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 )}
 
-                {/* Communication Signals */}
-                {data.rule_issues?.communication_flags?.length > 0 && (
-                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                    <h2 className="text-sm font-semibold text-yellow-800 mb-2">
-                      Communication Signals
-                    </h2>
-                    <ul className="space-y-1">
-                      {data.rule_issues.communication_flags.map((f: string, i: number) => (
-                        <li key={i} className="text-sm text-yellow-700 flex gap-2">
-                          <span className="shrink-0">•</span>
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
+                {/* Blockers + Risk Signals side by side */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {/* Blockers */}
+                  <div className="bg-white border border-slate-200 rounded-lg p-4">
+                    <h2 className="text-sm font-semibold text-slate-800 mb-2">Blockers</h2>
+                    {data.blockers?.length ? (
+                      <ul className="space-y-0.5">
+                        {data.blockers.map((b: string, i: number) => (
+                          <li key={i} className="text-sm text-slate-600 flex gap-1.5">
+                            <span className="text-orange-400 shrink-0">•</span>{b}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <span className="text-sm text-green-600 font-medium flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-green-400 shrink-0" />
+                        No blockers
+                      </span>
+                    )}
                   </div>
-                )}
 
-                {/* Blockers */}
-                <div className="bg-white border border-slate-200 rounded-lg p-4">
-                  <h2 className="text-sm font-semibold text-slate-800 mb-2">Blockers</h2>
-                  {data.blockers?.length ? (
-                    <ul className="space-y-1">
-                      {data.blockers.map((b: string, i: number) => (
-                        <li key={i} className="text-sm text-slate-600 flex gap-2">
-                          <span className="text-orange-400 shrink-0">•</span>
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className="text-sm text-slate-400">No blockers</p>
-                  )}
+                  {/* Quick checks: SLA + KYC compact */}
+                  <div className="bg-white border border-slate-200 rounded-lg p-4 space-y-3">
+                    <div>
+                      <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1">SLA</h3>
+                      <div className="group relative inline-flex">
+                        <span className={`inline-flex items-center gap-1.5 text-sm font-medium cursor-default ${
+                          data.rule_issues?.sla_breach ? "text-red-600" : "text-green-600"
+                        }`}>
+                          <span className={`w-2 h-2 rounded-full shrink-0 ${
+                            data.rule_issues?.sla_breach ? "bg-red-400" : "bg-green-400"
+                          }`} />
+                          {data.rule_issues?.sla_breach ? "Breached" : "Within SLA"}
+                        </span>
+                        {data.rule_issues?.sla_detail && (
+                          <div className="absolute left-0 bottom-full mb-2 hidden group-hover:block z-10">
+                            <div className="bg-slate-800 text-white text-xs rounded-md px-3 py-2 whitespace-nowrap shadow-lg">
+                              <div>Allowed: {data.rule_issues.sla_detail.sla_hours}h</div>
+                              <div>Elapsed: {data.rule_issues.sla_detail.elapsed_hours}h</div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1">KYC</h3>
+                      {data.rule_issues?.kyc_issues?.length ? (
+                        <ul className="space-y-0.5">
+                          {data.rule_issues.kyc_issues.map((k: string, i: number) => (
+                            <li key={i} className="text-sm text-slate-600 flex gap-1.5">
+                              <span className="text-orange-400 shrink-0">•</span>{k}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <span className="text-sm text-green-600 font-medium flex items-center gap-1.5">
+                          <span className="w-2 h-2 rounded-full bg-green-400 shrink-0" />
+                          Clear
+                        </span>
+                      )}
+                    </div>
+                  </div>
                 </div>
 
-                {/* Risk Signals — consolidated card */}
-                <div className="bg-white border border-slate-200 rounded-lg p-4">
-                  <h2 className="text-sm font-semibold text-slate-800 mb-4">Risk Signals</h2>
-                  <div className="divide-y divide-slate-100 space-y-0">
-                    {/* Missing Documents */}
-                    <div className="pb-4">
-                      <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">
-                        Missing Documents
-                      </h3>
-                      {data.rule_issues?.missing_documents?.length ? (
-                        <ul className="space-y-1">
-                          {data.rule_issues.missing_documents.map((d: string, i: number) => (
-                            <li key={i} className="text-sm text-slate-600 flex gap-2">
-                              <span className="text-red-400 shrink-0">•</span>
-                              {d}
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <p className="text-sm text-slate-400">None</p>
-                      )}
-                    </div>
-
-                    {/* SLA */}
-                    <div className="py-4">
-                      <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">
-                        SLA Status
-                      </h3>
-                      <span
-                        className={`inline-flex items-center gap-1.5 text-sm font-medium ${
-                          data.rule_issues?.sla_breach ? "text-red-600" : "text-green-600"
-                        }`}
-                      >
-                        <span
-                          className={`w-2 h-2 rounded-full inline-block shrink-0 ${
-                            data.rule_issues?.sla_breach ? "bg-red-400" : "bg-green-400"
-                          }`}
-                        />
-                        {data.rule_issues?.sla_breach ? "Breached" : "Within SLA"}
+                {/* Documents row: Missing Docs + Field Mismatches + Cross-Doc */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <div className="bg-white border border-slate-200 rounded-lg p-4">
+                    <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">Missing Docs</h3>
+                    {data.rule_issues?.missing_documents?.length ? (
+                      <ul className="space-y-0.5">
+                        {data.rule_issues.missing_documents.map((d: string, i: number) => (
+                          <li key={i} className="text-sm text-slate-600 flex gap-1.5">
+                            <span className="text-red-400 shrink-0">•</span>{d}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <span className="text-sm text-green-600 font-medium flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-green-400 shrink-0" />
+                        All present
                       </span>
-                    </div>
+                    )}
+                  </div>
 
-                    {/* KYC */}
-                    <div className="py-4">
-                      <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">
-                        KYC Issues
-                      </h3>
-                      {data.rule_issues?.kyc_issues?.length ? (
-                        <ul className="space-y-1">
-                          {data.rule_issues.kyc_issues.map((k: string, i: number) => (
-                            <li key={i} className="text-sm text-slate-600 flex gap-2">
-                              <span className="text-orange-400 shrink-0">•</span>
-                              {k}
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <p className="text-sm text-slate-400">None</p>
-                      )}
-                    </div>
-
-                    {/* Field Mismatches */}
-                    <div className="py-4">
-                      <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">
-                        Field Mismatches
-                      </h3>
-                      {data.rule_issues?.field_mismatches?.length ? (
-                        <div className="space-y-2">
-                          {data.rule_issues.field_mismatches.map((m: any, i: number) => (
-                            <div
-                              key={i}
-                              className="text-sm border border-slate-100 rounded-md p-2.5 bg-slate-50"
-                            >
-                              <div className="font-medium text-slate-700">{m.type}</div>
-                              <div className="text-xs text-slate-500 mt-0.5">
-                                Doc: {m.document_id}
-                              </div>
-                              <div className="text-xs text-slate-600 mt-0.5">
-                                Expected <b>{m.expected}</b> · Got <b>{m.actual}</b>
-                              </div>
+                  <div className="bg-white border border-slate-200 rounded-lg p-4">
+                    <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">Field Mismatches</h3>
+                    {data.rule_issues?.field_mismatches?.length ? (
+                      <div className="space-y-1.5">
+                        {data.rule_issues.field_mismatches.map((m: any, i: number) => (
+                          <div key={i} className="text-xs bg-slate-50 rounded p-2">
+                            <div className="font-medium text-slate-700">{m.type}</div>
+                            <div className="text-slate-500">{m.document_id}</div>
+                            <div className="text-slate-600">
+                              <b>{m.expected}</b> → <b>{m.actual}</b>
                             </div>
-                          ))}
-                        </div>
-                      ) : (
-                        <p className="text-sm text-slate-400">None</p>
-                      )}
-                    </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <span className="text-sm text-green-600 font-medium flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-green-400 shrink-0" />
+                        Consistent
+                      </span>
+                    )}
+                  </div>
 
-                    {/* Cross-Document Consistency */}
-                    <div className="pt-4">
-                      <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">
-                        Cross-Document Consistency
-                      </h3>
-                      <CrossDocViz data={data.rule_issues?.cross_doc_mismatch} />
-                    </div>
+                  <div className="bg-white border border-slate-200 rounded-lg p-4">
+                    <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">Cross-Doc</h3>
+                    <CrossDocViz data={data.rule_issues?.cross_doc_mismatch} />
                   </div>
                 </div>
               </div>
@@ -538,16 +523,10 @@ export default function Home() {
               <div className="space-y-3">
                 {data.escalation?.needed && (
                   <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                    <h2 className="text-sm font-semibold text-red-700 mb-2">
-                      Escalation Required
-                    </h2>
-                    <div className="text-sm text-red-600 space-y-1">
-                      <p>
-                        <span className="font-medium">Owner:</span> {data.escalation.owner}
-                      </p>
-                      <p>
-                        <span className="font-medium">Reason:</span> {data.escalation.reason}
-                      </p>
+                    <h2 className="text-sm font-semibold text-red-700 mb-1.5">Escalation Required</h2>
+                    <div className="text-sm text-red-600 flex gap-4">
+                      <p><span className="font-medium">Owner:</span> {data.escalation.owner}</p>
+                      <p><span className="font-medium">Reason:</span> {data.escalation.reason}</p>
                     </div>
                   </div>
                 )}
