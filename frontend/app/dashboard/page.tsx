@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import KpiCards from "@/components/dashboard/KpiCards";
 import PipelineTable, { type PipelineStage } from "@/components/dashboard/PipelineTable";
 import ActionQueue, { type ActionItem } from "@/components/dashboard/ActionQueue";
@@ -71,8 +71,8 @@ export default function DashboardPage() {
           </div>
           <Button variant="ghost" size="sm" asChild>
             <a href="/deals">
-              <ArrowLeft className="size-3.5" />
               Deal Analysis
+              <ArrowRight className="size-3.5" />
             </a>
           </Button>
         </div>
