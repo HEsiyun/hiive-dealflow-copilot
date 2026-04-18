@@ -35,10 +35,7 @@ export default function DealSidebar({
   onClose?: () => void;
 }) {
   const [search, setSearch] = useState("");
-  const [collapsedGroups, setCollapsedGroups] = useState<Set<string> | null>(() => {
-    const stages = new Set(deals.map((d) => d.current_stage || "Unknown"));
-    return stages;
-  });
+  const [collapsedGroups, setCollapsedGroups] = useState<Set<string> | null>(null);
 
   const filteredDeals = useMemo(() => {
     const q = search.trim().toLowerCase();
