@@ -25,7 +25,7 @@ import type { DealSummary, DealAnalysis } from "@/types/deal";
 
 export default function DealsPage() {
   const searchParams = useSearchParams();
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedDeal, setSelectedDeal] = useState("D-1005");
   const [data, setData] = useState<DealAnalysis | null>(null);
   const [loading, setLoading] = useState(false);
@@ -51,7 +51,10 @@ export default function DealsPage() {
 
   useEffect(() => {
     const dealId = searchParams.get("deal");
-    if (dealId) analyze(dealId);
+    if (dealId) {
+      setSidebarOpen(false);
+      analyze(dealId);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
