@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import KpiCards from "@/components/dashboard/KpiCards";
@@ -9,6 +10,7 @@ import ActionQueue, { type ActionItem } from "@/components/dashboard/ActionQueue
 import type { OverviewData } from "@/types/deal";
 
 export default function DashboardPage() {
+  const router = useRouter();
   const [overview, setOverview] = useState<OverviewData | null>(null);
   const [pipeline, setPipeline] = useState<PipelineStage[]>([]);
   const [queue, setQueue] = useState<ActionItem[]>([]);
@@ -68,7 +70,7 @@ export default function DashboardPage() {
             <h1 className="text-xl font-bold text-slate-900">Dashboard</h1>
           </div>
           <Button variant="ghost" size="sm" asChild>
-            <a href="/">
+            <a href="/deals">
               <ArrowLeft className="size-3.5" />
               Deal Analysis
             </a>
@@ -91,7 +93,7 @@ export default function DashboardPage() {
 
         <section>
           <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Action Queue</h2>
-          <ActionQueue data={queue} />
+          <ActionQueue data={queue} onDealClick={(dealId) => router.push(`/deals?deal=${dealId}`)} />
         </section>
       </div>
     </div>

@@ -58,7 +58,7 @@ function FilterSelect({
   );
 }
 
-export default function ActionQueue({ data }: { data: ActionItem[] }) {
+export default function ActionQueue({ data, onDealClick }: { data: ActionItem[]; onDealClick?: (dealId: string) => void }) {
   const [statusFilter, setStatusFilter] = useState("");
   const [stageFilter, setStageFilter] = useState("");
   const [priorityFilter, setPriorityFilter] = useState("");
@@ -121,8 +121,12 @@ export default function ActionQueue({ data }: { data: ActionItem[] }) {
           </thead>
           <tbody>
             {filtered.map((d) => (
-              <tr key={d.deal_id} className="border-b border-slate-100 hover:bg-slate-50 transition">
-                <td className="px-4 py-2 font-mono text-xs text-slate-600">{d.deal_id}</td>
+              <tr
+                key={d.deal_id}
+                className={`border-b border-slate-100 hover:bg-slate-50 transition${onDealClick ? " cursor-pointer" : ""}`}
+                onClick={() => onDealClick?.(d.deal_id)}
+              >
+                <td className="px-4 py-2 font-mono text-xs text-blue-600 underline">{d.deal_id}</td>
                 <td className="px-3 py-2 font-medium text-slate-800">{d.company_name}</td>
                 <td className="px-3 py-2 text-slate-600 capitalize">{d.current_stage.replace(/_/g, " ")}</td>
                 <td className="px-3 py-2 text-center">

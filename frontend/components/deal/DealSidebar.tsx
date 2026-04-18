@@ -1,9 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Search, ChevronRight, ChevronDown } from "lucide-react";
+import { Search, ChevronRight, ChevronDown, ChevronLeft } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import Sidebar from "@/components/layout/Sidebar";
 import DealListItem from "./DealListItem";
 import type { DealSummary } from "@/types/deal";
@@ -25,6 +24,7 @@ export default function DealSidebar({
   forceFallback,
   onSelectDeal,
   onToggleFallback,
+  onClose,
 }: {
   deals: DealSummary[];
   dealsLoading: boolean;
@@ -32,6 +32,7 @@ export default function DealSidebar({
   forceFallback: boolean;
   onSelectDeal: (dealId: string) => void;
   onToggleFallback: (checked: boolean) => void;
+  onClose?: () => void;
 }) {
   const [search, setSearch] = useState("");
   const [collapsedGroups, setCollapsedGroups] = useState<Set<string> | null>(() => {
@@ -87,9 +88,15 @@ export default function DealSidebar({
           <h2 className="text-xs font-semibold tracking-widest text-slate-800 uppercase">
             Deal Pipeline
           </h2>
-          <Button variant="link" size="xs" asChild>
-            <a href="/dashboard">Dashboard</a>
-          </Button>
+          {onClose && (
+            <button
+              onClick={onClose}
+              title="Collapse sidebar"
+              className="p-1 rounded hover:bg-slate-100 text-slate-400 hover:text-slate-600 transition"
+            >
+              <ChevronLeft className="size-3.5" />
+            </button>
+          )}
         </div>
         <p className="text-[11px] text-slate-400 mt-0.5">
           Select a deal to run readiness analysis
