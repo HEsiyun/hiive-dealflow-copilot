@@ -20,21 +20,35 @@ def compute_readiness(ctx):
       - Deadline buffer      (0–20 pts): how much time remains relative to total duration
     """
 
+    stage = ctx.deal.current_stage.lower()
+
     # ── Document Completion (50 pts) ──────────────────────────────
-    if ctx.workflow_template and ctx.workflow_template.required_docs:
+    # Closed deals have no stage template, so mirror check_missing_documents():
+    # evaluate against the union of all pipeline stage templates so that
+    # progress and risk always agree on which documents are required.
+    if stage == "closed" and ctx.all_workflow_templates:
+        all_required = set()
+        for t in ctx.all_workflow_templates:
+            all_required.update(t.required_docs)
+        submitted = set(d.doc_type for d in ctx.documents)
+        matched = all_required & submitted
+        if all_required:
+            doc_score = round((len(matched) / len(all_required)) * 50)
+            doc_detail = f"{len(matched)}/{len(all_required)} docs"
+        else:
+            doc_score = 50
+            doc_detail = "No requirements defined"
+    elif ctx.workflow_template and ctx.workflow_template.required_docs:
         required = set(ctx.workflow_template.required_docs)
         submitted = set(d.doc_type for d in ctx.documents)
         matched = required & submitted
-        doc_ratio = len(matched) / len(required)
-        doc_score = round(doc_ratio * 50)
+        doc_score = round((len(matched) / len(required)) * 50)
         doc_detail = f"{len(matched)}/{len(required)} docs"
     else:
-        matched, required = set(), set()
         doc_score = 50  # no template — assume complete
         doc_detail = "No requirements defined"
 
     # ── Stage Progression (30 pts) ────────────────────────────────
-    stage = ctx.deal.current_stage.lower()
     if stage in PIPELINE_STAGES:
         stage_idx = PIPELINE_STAGES.index(stage)
         # Normalize: intake=0, closed=30
@@ -71,11 +85,11 @@ def compute_readiness(ctx):
     total = doc_score + stage_score + deadline_score
 
     if total >= 70:
-        status = "ready"
+        status = "near_close"
     elif total >= 40:
-        status = "at_risk"
+        status = "active"
     else:
-        status = "blocked"
+        status = "early"
 
     return {
         "readiness_score": total,

@@ -109,9 +109,9 @@ export type DealAnalysis = {
 
 export type OverviewData = {
   total_deals: number;
-  ready_count: number;
-  at_risk_count: number;
-  blocked_count: number;
+  near_close_count: number;
+  active_count: number;
+  early_count: number;
   sla_breach_count: number;
   escalation_count: number;
   kyc_issue_count: number;

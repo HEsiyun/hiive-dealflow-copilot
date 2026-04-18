@@ -1,24 +1,24 @@
 export type PipelineStage = {
   stage: string;
   total: number;
-  blocked: number;
-  at_risk: number;
-  ready: number;
+  early: number;
+  active: number;
+  near_close: number;
   avg_days_in_stage: number;
   sla_breaches: number;
 };
 
-function StatusBar({ blocked, at_risk, ready, total }: PipelineStage) {
+function StatusBar({ early, active, near_close, total }: PipelineStage) {
   if (total === 0) return <div className="h-2 w-full bg-slate-100 rounded-full" />;
-  const bPct = (blocked / total) * 100;
-  const aPct = (at_risk / total) * 100;
-  const rPct = (ready / total) * 100;
+  const ePct = (early / total) * 100;
+  const aPct = (active / total) * 100;
+  const nPct = (near_close / total) * 100;
 
   return (
     <div className="flex h-2 w-full rounded-full overflow-hidden bg-slate-100">
-      {bPct > 0 && <div className="bg-red-400" style={{ width: `${bPct}%` }} />}
+      {ePct > 0 && <div className="bg-slate-300" style={{ width: `${ePct}%` }} />}
       {aPct > 0 && <div className="bg-yellow-400" style={{ width: `${aPct}%` }} />}
-      {rPct > 0 && <div className="bg-green-400" style={{ width: `${rPct}%` }} />}
+      {nPct > 0 && <div className="bg-green-400" style={{ width: `${nPct}%` }} />}
     </div>
   );
 }
@@ -31,10 +31,10 @@ export default function PipelineTable({ stages }: { stages: PipelineStage[] }) {
           <tr className="border-b border-slate-200 bg-slate-50">
             <th className="text-left px-4 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Stage</th>
             <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Deals</th>
-            <th className="px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide w-40">Status Distribution</th>
-            <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Blocked</th>
-            <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">At Risk</th>
-            <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Ready</th>
+            <th className="px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide w-40">Progress Distribution</th>
+            <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Early</th>
+            <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Active</th>
+            <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Near Close</th>
             <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Avg Days</th>
             <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">SLA</th>
           </tr>
@@ -48,13 +48,13 @@ export default function PipelineTable({ stages }: { stages: PipelineStage[] }) {
                 <StatusBar {...s} />
               </td>
               <td className="text-center px-3 py-2.5 tabular-nums">
-                <span className={s.blocked > 0 ? "text-red-600 font-medium" : "text-slate-400"}>{s.blocked}</span>
+                <span className={s.early > 0 ? "text-slate-600 font-medium" : "text-slate-400"}>{s.early}</span>
               </td>
               <td className="text-center px-3 py-2.5 tabular-nums">
-                <span className={s.at_risk > 0 ? "text-yellow-600 font-medium" : "text-slate-400"}>{s.at_risk}</span>
+                <span className={s.active > 0 ? "text-yellow-600 font-medium" : "text-slate-400"}>{s.active}</span>
               </td>
               <td className="text-center px-3 py-2.5 tabular-nums">
-                <span className={s.ready > 0 ? "text-green-600 font-medium" : "text-slate-400"}>{s.ready}</span>
+                <span className={s.near_close > 0 ? "text-green-600 font-medium" : "text-slate-400"}>{s.near_close}</span>
               </td>
               <td className="text-center px-3 py-2.5 tabular-nums text-slate-600">{s.avg_days_in_stage}d</td>
               <td className="text-center px-3 py-2.5 tabular-nums">

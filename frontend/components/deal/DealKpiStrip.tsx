@@ -17,11 +17,11 @@ const METRICS: {
   icon: typeof Layers;
   color: string;
 }[] = [
-  { key: "total_deals", label: "Total", icon: Layers, color: "text-slate-600" },
-  { key: "ready_count", label: "Ready", icon: CheckCircle2, color: "text-green-600" },
-  { key: "at_risk_count", label: "At Risk", icon: AlertTriangle, color: "text-yellow-600" },
-  { key: "blocked_count", label: "Blocked", icon: XOctagon, color: "text-red-600" },
-  { key: "sla_breach_count", label: "SLA", icon: Clock, color: "text-red-500" },
+  { key: "total_deals",      label: "Total",      icon: Layers,       color: "text-slate-600" },
+  { key: "near_close_count", label: "Near Close", icon: CheckCircle2, color: "text-green-600" },
+  { key: "active_count",     label: "Active",     icon: AlertTriangle, color: "text-yellow-600" },
+  { key: "early_count",      label: "Early",      icon: XOctagon,     color: "text-slate-500" },
+  { key: "sla_breach_count", label: "SLA",        icon: Clock,        color: "text-red-500" },
   { key: "escalation_count", label: "Escalations", icon: ArrowUpRight, color: "text-orange-600" },
 ];
 

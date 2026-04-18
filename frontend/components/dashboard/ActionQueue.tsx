@@ -9,6 +9,8 @@ export type ActionItem = {
   priority: string;
   readiness_status: string;
   readiness_score: number;
+  risk_score: number;
+  risk_level: string;
   main_blocker: string | null;
   next_action: string | null;
   escalation_needed: boolean;
@@ -16,16 +18,28 @@ export type ActionItem = {
   sla_breach: boolean;
 };
 
-const STATUS_COLORS: Record<string, string> = {
-  blocked: "bg-red-100 text-red-700",
-  at_risk: "bg-yellow-100 text-yellow-700",
-  ready: "bg-green-100 text-green-700",
+const PROGRESS_COLORS: Record<string, string> = {
+  near_close: "bg-green-100 text-green-700",
+  active:     "bg-yellow-100 text-yellow-700",
+  early:      "bg-slate-100 text-slate-600",
+};
+
+const PROGRESS_LABEL: Record<string, string> = {
+  near_close: "Near Close",
+  active:     "Active",
+  early:      "Early",
+};
+
+const RISK_COLORS: Record<string, string> = {
+  high:   "bg-red-100 text-red-700",
+  medium: "bg-orange-100 text-orange-700",
+  low:    "bg-green-100 text-green-700",
 };
 
 const PRIORITY_COLORS: Record<string, string> = {
-  high: "bg-red-50 text-red-600",
+  high:   "bg-red-50 text-red-600",
   medium: "bg-yellow-50 text-yellow-600",
-  low: "bg-slate-100 text-slate-500",
+  low:    "bg-slate-100 text-slate-500",
 };
 
 function FilterSelect({
@@ -33,11 +47,13 @@ function FilterSelect({
   value,
   onChange,
   options,
+  renderLabel,
 }: {
   label: string;
   value: string;
   onChange: (v: string) => void;
   options: string[];
+  renderLabel?: (o: string) => string;
 }) {
   return (
     <div className="flex items-center gap-1.5">
@@ -50,7 +66,7 @@ function FilterSelect({
         <option value="">All</option>
         {options.map((o) => (
           <option key={o} value={o}>
-            {o.replace(/_/g, " ")}
+            {renderLabel ? renderLabel(o) : o.replace(/_/g, " ")}
           </option>
         ))}
       </select>
@@ -59,7 +75,7 @@ function FilterSelect({
 }
 
 export default function ActionQueue({ data, onDealClick }: { data: ActionItem[]; onDealClick?: (dealId: string) => void }) {
-  const [statusFilter, setStatusFilter] = useState("");
+  const [riskFilter, setRiskFilter] = useState("");
   const [stageFilter, setStageFilter] = useState("");
   const [priorityFilter, setPriorityFilter] = useState("");
 
@@ -70,21 +86,22 @@ export default function ActionQueue({ data, onDealClick }: { data: ActionItem[];
 
   const filtered = useMemo(() => {
     let result = data;
-    if (statusFilter) result = result.filter((d) => d.readiness_status === statusFilter);
-    if (stageFilter) result = result.filter((d) => d.current_stage === stageFilter);
+    if (riskFilter)     result = result.filter((d) => d.risk_level === riskFilter);
+    if (stageFilter)    result = result.filter((d) => d.current_stage === stageFilter);
     if (priorityFilter) result = result.filter((d) => d.priority === priorityFilter);
     return result;
-  }, [data, statusFilter, stageFilter, priorityFilter]);
+  }, [data, riskFilter, stageFilter, priorityFilter]);
 
   return (
     <div className="bg-white border border-slate-200 rounded-lg overflow-hidden">
       {/* Filter bar */}
       <div className="flex items-center gap-4 px-4 py-3 border-b border-slate-200 bg-slate-50 flex-wrap">
         <FilterSelect
-          label="Status"
-          value={statusFilter}
-          onChange={setStatusFilter}
-          options={["blocked", "at_risk", "ready"]}
+          label="Risk"
+          value={riskFilter}
+          onChange={setRiskFilter}
+          options={["high", "medium", "low"]}
+          renderLabel={(o) => o.charAt(0).toUpperCase() + o.slice(1)}
         />
         <FilterSelect
           label="Stage"
@@ -97,6 +114,7 @@ export default function ActionQueue({ data, onDealClick }: { data: ActionItem[];
           value={priorityFilter}
           onChange={setPriorityFilter}
           options={["high", "medium", "low"]}
+          renderLabel={(o) => o.charAt(0).toUpperCase() + o.slice(1)}
         />
         <span className="text-xs text-slate-400 ml-auto tabular-nums">
           {filtered.length} of {data.length} deals
@@ -112,8 +130,9 @@ export default function ActionQueue({ data, onDealClick }: { data: ActionItem[];
               <th className="text-left px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Company</th>
               <th className="text-left px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Stage</th>
               <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Priority</th>
-              <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Status</th>
-              <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Score</th>
+              <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Progress</th>
+              <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Risk</th>
+              <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Risk Score</th>
               <th className="text-left px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Main Blocker</th>
               <th className="text-left px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Next Action</th>
               <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Esc.</th>
@@ -136,8 +155,13 @@ export default function ActionQueue({ data, onDealClick }: { data: ActionItem[];
                   </span>
                 </td>
                 <td className="px-3 py-2 text-center">
-                  <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${STATUS_COLORS[d.readiness_status] || "bg-slate-100 text-slate-600"}`}>
-                    {d.readiness_status.replace(/_/g, " ")}
+                  <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${PROGRESS_COLORS[d.readiness_status] || "bg-slate-100 text-slate-600"}`}>
+                    {PROGRESS_LABEL[d.readiness_status] ?? d.readiness_status}
+                  </span>
+                </td>
+                <td className="px-3 py-2 text-center">
+                  <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${RISK_COLORS[d.risk_level] || "bg-slate-100 text-slate-600"}`}>
+                    {d.risk_level ? d.risk_level.charAt(0).toUpperCase() + d.risk_level.slice(1) : "--"}
                   </span>
                 </td>
                 <td className="px-3 py-2 text-center">
@@ -145,16 +169,16 @@ export default function ActionQueue({ data, onDealClick }: { data: ActionItem[];
                     <div className="w-10 h-1.5 bg-slate-100 rounded-full overflow-hidden">
                       <div
                         className={`h-1.5 rounded-full ${
-                          d.readiness_score >= 80
-                            ? "bg-green-400"
-                            : d.readiness_score >= 50
-                            ? "bg-yellow-400"
-                            : "bg-red-400"
+                          d.risk_score >= 70
+                            ? "bg-red-400"
+                            : d.risk_score >= 40
+                            ? "bg-orange-400"
+                            : "bg-green-400"
                         }`}
-                        style={{ width: `${d.readiness_score}%` }}
+                        style={{ width: `${d.risk_score}%` }}
                       />
                     </div>
-                    <span className="text-xs tabular-nums text-slate-600 w-6 text-right">{d.readiness_score}</span>
+                    <span className="text-xs tabular-nums text-slate-600 w-6 text-right">{d.risk_score}</span>
                   </div>
                 </td>
                 <td className="px-3 py-2 text-xs text-slate-600 max-w-[200px] truncate">
@@ -183,7 +207,7 @@ export default function ActionQueue({ data, onDealClick }: { data: ActionItem[];
             ))}
             {filtered.length === 0 && (
               <tr>
-                <td colSpan={10} className="px-4 py-8 text-center text-sm text-slate-400">
+                <td colSpan={11} className="px-4 py-8 text-center text-sm text-slate-400">
                   No deals match the selected filters
                 </td>
               </tr>

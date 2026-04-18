@@ -4,12 +4,14 @@ from typing import List, Optional
 from app.services.context_builder import DealContextBuilder
 from app.rules.basic_rules import run_all_checks
 from app.scoring.readiness_scoring import compute_readiness
+from app.scoring.risk_scoring import compute_risk
 from app.services.escalation import compute_escalation
 from app.services.fallback_builder import build_fallback_response
 from app.models.models import Deal
 
 
-STATUS_SORT = {"blocked": 0, "at_risk": 1, "ready": 2}
+STATUS_SORT = {"early": 0, "active": 1, "near_close": 2}
+RISK_SORT = {"high": 0, "medium": 1, "low": 2}
 PRIORITY_SORT = {"high": 0, "medium": 1, "low": 2}
 
 
@@ -19,6 +21,7 @@ def analyze_deal_lightweight(builder: DealContextBuilder, deal: Deal) -> dict:
     rule_results = run_all_checks(ctx)
     fallback = build_fallback_response(rule_results)
     readiness = compute_readiness(ctx)
+    risk_score, risk_level = compute_risk(rule_results, {"blockers": []})
     escalation = compute_escalation(rule_results, stage=deal.current_stage)
 
     days_in_stage = (datetime.utcnow() - deal.last_stage_change_at).total_seconds() / 86400
@@ -31,6 +34,8 @@ def analyze_deal_lightweight(builder: DealContextBuilder, deal: Deal) -> dict:
         "readiness_status": readiness["readiness_status"],
         "readiness_score": readiness["readiness_score"],
         "readiness_reasons": readiness["readiness_reasons"],
+        "risk_score": risk_score,
+        "risk_level": risk_level,
         "sla_breach": rule_results.get("sla_breach", False),
         "kyc_issues": rule_results.get("kyc_issues", []),
         "cross_doc_mismatch": rule_results.get("cross_doc_mismatch"),
@@ -56,9 +61,9 @@ def get_overview(builder: DealContextBuilder, deals: List[Deal]) -> dict:
 
     return {
         "total_deals": len(results),
-        "ready_count": sum(1 for r in results if r["readiness_status"] == "ready"),
-        "at_risk_count": sum(1 for r in results if r["readiness_status"] == "at_risk"),
-        "blocked_count": sum(1 for r in results if r["readiness_status"] == "blocked"),
+        "near_close_count": sum(1 for r in results if r["readiness_status"] == "near_close"),
+        "active_count": sum(1 for r in results if r["readiness_status"] == "active"),
+        "early_count": sum(1 for r in results if r["readiness_status"] == "early"),
         "sla_breach_count": sum(1 for r in results if r["sla_breach"]),
         "escalation_count": sum(1 for r in results if r["escalation_needed"]),
         "kyc_issue_count": sum(1 for r in results if r["kyc_issues"]),
@@ -82,9 +87,9 @@ def get_pipeline(builder: DealContextBuilder, deals: List[Deal]) -> dict:
         stages.append({
             "stage": stage,
             "total": len(items),
-            "blocked": sum(1 for i in items if i["readiness_status"] == "blocked"),
-            "at_risk": sum(1 for i in items if i["readiness_status"] == "at_risk"),
-            "ready": sum(1 for i in items if i["readiness_status"] == "ready"),
+            "early": sum(1 for i in items if i["readiness_status"] == "early"),
+            "active": sum(1 for i in items if i["readiness_status"] == "active"),
+            "near_close": sum(1 for i in items if i["readiness_status"] == "near_close"),
             "avg_days_in_stage": round(
                 sum(i["days_in_stage"] for i in items) / len(items), 1
             ),
@@ -121,9 +126,10 @@ def get_action_queue(
     if only_sla_breach:
         results = [r for r in results if r["sla_breach"]]
 
-    # Sort: blocked > at_risk > ready, then high > medium > low, then lower score first
+    # Sort: early > active > near_close, then high > medium > low risk, then high > medium > low priority, then lower score first
     results.sort(key=lambda r: (
         STATUS_SORT.get(r["readiness_status"], 9),
+        RISK_SORT.get(r["risk_level"], 9),
         PRIORITY_SORT.get(r["priority"], 9),
         r["readiness_score"],
     ))
@@ -136,6 +142,8 @@ def get_action_queue(
             "priority": r["priority"],
             "readiness_status": r["readiness_status"],
             "readiness_score": r["readiness_score"],
+            "risk_score": r["risk_score"],
+            "risk_level": r["risk_level"],
             "main_blocker": r["main_blocker"],
             "next_action": r["next_action"],
             "escalation_needed": r["escalation_needed"],

@@ -2,10 +2,16 @@ import { Card, CardContent, CardHeader, CardTitle, CardAction } from "@/componen
 import { Badge } from "@/components/ui/badge";
 import type { DealAnalysis } from "@/types/deal";
 
-const STATUS_BADGE: Record<string, string> = {
-  ready:   "bg-green-100 text-green-700 border-green-200",
-  at_risk: "bg-yellow-100 text-yellow-700 border-yellow-200",
-  blocked: "bg-red-100 text-red-700 border-red-200",
+const PROGRESS_BADGE: Record<string, string> = {
+  near_close: "bg-green-100 text-green-700 border-green-200",
+  active:     "bg-yellow-100 text-yellow-700 border-yellow-200",
+  early:      "bg-slate-100 text-slate-600 border-slate-200",
+};
+
+const PROGRESS_LABEL: Record<string, string> = {
+  near_close: "Near Close",
+  active:     "Active",
+  early:      "Early",
 };
 
 const RISK_BADGE: Record<string, string> = {
@@ -60,16 +66,16 @@ function BarRow({
   );
 }
 
-function getDecisionHint(readiness: number, risk: number) {
-  if (readiness >= 70 && risk < 40) return "Ready to close";
-  if (readiness >= 70 && risk >= 40) return "⚠ Fix issues before close";
-  if (readiness < 70 && risk < 40) return "Normal progress";
-  return "Troubled deal";
+function getDecisionHint(progress: number, risk: number) {
+  if (progress >= 70 && risk < 40) return "Ready to close";
+  if (progress >= 70 && risk >= 40) return "⚠ Fix issues before close";
+  if (progress < 70 && risk < 40) return "Normal progress";
+  return "Needs attention";
 }
 
 export default function ReadinessCard({ data }: { data: DealAnalysis }) {
-  const status = data.readiness_status || "unknown";
-  const badgeCls = STATUS_BADGE[status] ?? STATUS_BADGE.blocked;
+  const status = data.readiness_status || "early";
+  const badgeCls = PROGRESS_BADGE[status] ?? PROGRESS_BADGE.early;
   const riskBar  = RISK_BAR[data.risk_level]  ?? "bg-slate-300";
   const riskBadge = RISK_BADGE[data.risk_level] ?? "bg-slate-100 text-slate-600 border-slate-200";
   const bd = data.readiness_breakdown;
@@ -83,7 +89,7 @@ export default function ReadinessCard({ data }: { data: DealAnalysis }) {
         <CardTitle className="text-sm">Deal Health</CardTitle>
         <CardAction className="flex gap-1.5">
           <Badge className={`border ${badgeCls}`}>
-            {status.replace(/_/g, " ").toUpperCase()}
+            {PROGRESS_LABEL[status] ?? status}
           </Badge>
           {data.risk_level && (
             <Badge className={`border ${riskBadge}`}>
@@ -99,10 +105,10 @@ export default function ReadinessCard({ data }: { data: DealAnalysis }) {
           {/* LEFT */}
           <div className="space-y-4">
 
-            {/* Readiness */}
+            {/* Progress */}
             <div className="space-y-2.5">
               <BarRow
-                label="Readiness"
+                label="Progress"
                 score={data.readiness_score ?? 0}
                 max={100}
                 barColor="bg-blue-500"
@@ -127,7 +133,6 @@ export default function ReadinessCard({ data }: { data: DealAnalysis }) {
               </p>
             </div>
 
-            {/* Decision hint（加分点，但不突兀） */}
             <div className="text-xs text-slate-600 pt-2">
               → {decisionHint}
             </div>
@@ -136,10 +141,10 @@ export default function ReadinessCard({ data }: { data: DealAnalysis }) {
           {/* RIGHT */}
           <div className="space-y-4">
 
-            {/* Readiness Breakdown */}
+            {/* Progress Breakdown */}
             <div>
               <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wide mb-1.5">
-                Readiness Breakdown
+                Progress Breakdown
               </p>
               {bd ? (
                 <div className="space-y-1">
