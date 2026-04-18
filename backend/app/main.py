@@ -10,7 +10,9 @@ from pydantic import BaseModel
 from app.services.audit_builder import build_audit_trail
 from app.services.escalation import compute_escalation
 from app.scoring.readiness_scoring import compute_readiness
+from app.services.dashboard import get_overview, get_pipeline, get_action_queue
 import os
+from typing import Optional
 
 app = FastAPI()
 
@@ -150,6 +152,33 @@ Deal Operations
             "source": "fallback",
             "error": str(e)
         }
+
+
+# ---------------- Dashboard ----------------
+
+@app.get("/dashboard/overview")
+def dashboard_overview():
+    return get_overview(builder, store.deals)
+
+
+@app.get("/dashboard/pipeline")
+def dashboard_pipeline():
+    return get_pipeline(builder, store.deals)
+
+
+@app.get("/dashboard/action-queue")
+def dashboard_action_queue(
+    status: Optional[str] = None,
+    stage: Optional[str] = None,
+    priority: Optional[str] = None,
+    only_escalated: bool = False,
+    only_sla_breach: bool = False,
+):
+    return get_action_queue(
+        builder, store.deals,
+        status=status, stage=stage, priority=priority,
+        only_escalated=only_escalated, only_sla_breach=only_sla_breach,
+    )
 
 
 # test at:
