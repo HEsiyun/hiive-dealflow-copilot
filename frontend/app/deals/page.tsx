@@ -14,7 +14,6 @@ import EscalationBanner from "@/components/deal/EscalationBanner";
 import ReadinessCard from "@/components/deal/ReadinessCard";
 import SummaryNextActionRow from "@/components/deal/SummaryNextActionRow";
 import AlertCards from "@/components/deal/AlertCards";
-import BlockersCard from "@/components/deal/BlockersCard";
 import ComplianceCard from "@/components/deal/ComplianceCard";
 import DocumentCards from "@/components/deal/DocumentCards";
 import Timeline from "@/components/Timeline";
@@ -71,6 +70,7 @@ export default function DealsPage() {
     } catch (err: any) {
       setData({
         deal_id: dealId,
+        priority: undefined,
         error: err.message,
         source: "frontend-error",
         rule_issues: {
@@ -88,6 +88,7 @@ export default function DealsPage() {
         readiness_status: "unknown",
         readiness_score: 0,
         readiness_reasons: [],
+        readiness_breakdown: undefined,
         stage_events: [],
         risk_score: 0,
         risk_level: "unknown",
@@ -179,10 +180,7 @@ export default function DealsPage() {
             <SectionHeader icon={ShieldAlert} label="Risk & Compliance" />
             <div className="space-y-3">
               <AlertCards ruleIssues={data.rule_issues} />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <BlockersCard blockers={data.blockers} />
-                <ComplianceCard ruleIssues={data.rule_issues} />
-              </div>
+              <ComplianceCard ruleIssues={data.rule_issues} />
               <DocumentCards ruleIssues={data.rule_issues} />
             </div>
           </section>

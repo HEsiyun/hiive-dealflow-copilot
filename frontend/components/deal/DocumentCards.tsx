@@ -4,6 +4,11 @@ import CrossDocViz from "@/components/CrossDocViz";
 import type { RuleIssues } from "@/types/deal";
 
 export default function DocumentCards({ ruleIssues }: { ruleIssues: RuleIssues }) {
+  // seller_name_mismatch is surfaced in Quick Checks; only show doc-level mismatches here
+  const docMismatches = ruleIssues?.field_mismatches?.filter(
+    (m) => m.type !== "seller_name_mismatch"
+  ) ?? [];
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
       {/* Missing Docs */}
@@ -41,9 +46,9 @@ export default function DocumentCards({ ruleIssues }: { ruleIssues: RuleIssues }
           </CardTitle>
         </CardHeader>
         <CardContent>
-          {ruleIssues?.field_mismatches?.length ? (
+          {docMismatches.length ? (
             <div className="space-y-1.5">
-              {ruleIssues.field_mismatches.map((m, i) => (
+              {docMismatches.map((m, i) => (
                 <div key={i} className="text-xs bg-slate-50 rounded p-2">
                   <div className="font-medium text-slate-700">{m.type}</div>
                   <div className="text-slate-500">{m.document_id}</div>

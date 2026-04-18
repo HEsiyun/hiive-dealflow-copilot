@@ -24,9 +24,11 @@ function formatDate(ts: string) {
 
 function getDuration(prevTs: string, curTs: string) {
   if (!prevTs || !curTs) return "";
-  const diff = Math.round(
-    (new Date(curTs).getTime() - new Date(prevTs).getTime()) / (1000 * 60 * 60 * 24)
-  );
+  const d1 = new Date(prevTs);
+  const d2 = new Date(curTs);
+  const day1 = new Date(d1.getFullYear(), d1.getMonth(), d1.getDate());
+  const day2 = new Date(d2.getFullYear(), d2.getMonth(), d2.getDate());
+  const diff = Math.round((day2.getTime() - day1.getTime()) / (1000 * 60 * 60 * 24));
   if (diff === 0) return "<1d";
   return `${diff}d`;
 }

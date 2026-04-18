@@ -18,8 +18,8 @@ def analyze_deal_lightweight(builder: DealContextBuilder, deal: Deal) -> dict:
     ctx = builder.build(deal.deal_id)
     rule_results = run_all_checks(ctx)
     fallback = build_fallback_response(rule_results)
-    readiness = compute_readiness(rule_results, fallback)
-    escalation = compute_escalation(rule_results)
+    readiness = compute_readiness(ctx)
+    escalation = compute_escalation(rule_results, stage=deal.current_stage)
 
     days_in_stage = (datetime.utcnow() - deal.last_stage_change_at).total_seconds() / 86400
 

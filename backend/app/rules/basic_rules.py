@@ -3,15 +3,20 @@ from datetime import datetime
 
 
 def check_missing_documents(ctx: DealContext):
+    # Closed deals: check against cumulative requirements of all pipeline stages
+    if ctx.deal.current_stage == "closed" and ctx.all_workflow_templates:
+        all_required = set()
+        for t in ctx.all_workflow_templates:
+            all_required.update(t.required_docs)
+        existing = set(d.doc_type for d in ctx.documents)
+        return list(all_required - existing)
+
     if not ctx.workflow_template:
         return []
 
     required = set(ctx.workflow_template.required_docs)
     existing = set(d.doc_type for d in ctx.documents)
-
-    missing = required - existing
-
-    return list(missing)
+    return list(required - existing)
 
 
 def check_sla_breach(ctx: DealContext):
@@ -113,23 +118,22 @@ def check_accreditation_status(ctx: DealContext):
 
     return issues
 
+LATE_STAGES = ["signature", "settlement", "closed"]
+
 def check_stage_readiness_conflict(ctx: DealContext, rule_results):
     conflicts = []
 
     stage = ctx.deal.current_stage.lower()
 
-    # If the deal has progressed to a late stage but KYC is not completed
-    if stage in ["signature", "settlement", "closed"]:
+    if stage in LATE_STAGES:
         if rule_results.get("kyc_issues"):
             conflicts.append("kyc_incomplete_but_deal_advanced")
-
-    # If there are document inconsistencies but the deal continues to progress
-    if rule_results.get("cross_doc_mismatch") and stage in ["signature", "settlement"]:
-        conflicts.append("document_conflict_not_resolved")
-
-    # If required documents are missing but the deal has reached a late stage
-    if rule_results.get("missing_documents") and stage in ["signature", "settlement"]:
-        conflicts.append("missing_docs_but_deal_advanced")
+        if rule_results.get("accreditation_issues"):
+            conflicts.append("accreditation_incomplete_but_deal_advanced")
+        if rule_results.get("cross_doc_mismatch"):
+            conflicts.append("document_conflict_not_resolved")
+        if rule_results.get("missing_documents"):
+            conflicts.append("missing_docs_but_deal_advanced")
 
     return conflicts
 
@@ -137,13 +141,15 @@ def check_stage_readiness_conflict(ctx: DealContext, rule_results):
 def check_communication_blockers(ctx: DealContext):
     keywords = ["waiting", "missing", "issue", "delay", "consent", "approval"]
 
+    seen = set()
     blockers = []
 
     for c in ctx.communications:
         body = c.body.lower()
         for kw in keywords:
-            if kw in body:
+            if kw in body and kw not in seen:
                 blockers.append(f"communication_mentions_{kw}")
+                seen.add(kw)
                 break
 
     return blockers

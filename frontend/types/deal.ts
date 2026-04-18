@@ -47,6 +47,10 @@ export type AuditEvidence = {
   detail?: string;
   value?: string;
   documents?: string[];
+  snippet?: string;
+  channel?: string;
+  sender_role?: string;
+  subject?: string;
 };
 
 export type AuditTrail = {
@@ -71,13 +75,27 @@ export type StageEvent = {
   changed_by: string;
 };
 
+export type ReadinessBreakdown = {
+  docs_score: number;
+  docs_max: number;
+  docs_detail: string;
+  stage_score: number;
+  stage_max: number;
+  stage_detail: string;
+  deadline_score: number;
+  deadline_max: number;
+  deadline_detail: string;
+};
+
 export type DealAnalysis = {
   deal_id: string;
+  priority?: string;
   risk_score: number;
   risk_level: string;
   readiness_score: number;
   readiness_status: string;
   readiness_reasons: string[];
+  readiness_breakdown?: ReadinessBreakdown;
   rule_issues: RuleIssues;
   audit_trail: AuditTrail;
   llm_summary: string | null;

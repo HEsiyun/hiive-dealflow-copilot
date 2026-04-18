@@ -9,6 +9,19 @@ export default function DealHeader({ data }: { data: DealAnalysis }) {
         <h1 className="text-xl font-bold text-slate-900">{data.deal_id}</h1>
       </div>
       <div className="flex gap-1.5 flex-wrap items-center">
+        {data.priority && (
+          <Badge
+            className={`border ${
+              data.priority === "high"
+                ? "bg-red-100 text-red-700 border-red-200"
+                : data.priority === "medium"
+                ? "bg-yellow-100 text-yellow-700 border-yellow-200"
+                : "bg-slate-100 text-slate-600 border-slate-200"
+            }`}
+          >
+            {data.priority.charAt(0).toUpperCase() + data.priority.slice(1)} Priority
+          </Badge>
+        )}
         {data.source === "fallback" && (
           <Badge className="bg-orange-100 text-orange-700 border-orange-200 border">
             Fallback Mode

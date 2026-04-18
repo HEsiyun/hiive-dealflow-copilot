@@ -62,12 +62,26 @@ def build_audit_trail(ctx, rule_results, llm_results, score, level):
             "detail": conflict
         })
 
-    # ---------- COMMUNICATION FLAGS ----------
+    # ---------- COMMUNICATION FLAGS (with snippets) ----------
     for flag in rule_results.get("communication_flags", []):
-        evidence.append({
-            "type": "communication_flag",
-            "detail": flag
-        })
+        kw = flag.replace("communication_mentions_", "")
+        matching = [c for c in ctx.communications if kw in c.body.lower()]
+        if matching:
+            comm = matching[0]
+            snippet = comm.body if len(comm.body) <= 140 else comm.body[:137] + "..."
+            evidence.append({
+                "type": "communication_flag",
+                "detail": flag,
+                "snippet": snippet,
+                "channel": comm.channel,
+                "sender_role": comm.sender_role,
+                "subject": comm.subject,
+            })
+        else:
+            evidence.append({
+                "type": "communication_flag",
+                "detail": flag
+            })
 
     # ---------- LLM SIGNALS ----------
     for b in llm_results.get("blockers", []):

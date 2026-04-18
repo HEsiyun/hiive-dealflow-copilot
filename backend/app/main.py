@@ -74,11 +74,11 @@ def analyze_deal(deal_id: str, force_fallback: bool = False):
     # risk scoring
     score, level = compute_risk(rule_results, llm_results)
    
-    # readiness scoring
-    readiness = compute_readiness(rule_results, llm_results)
-   
+    # readiness scoring (progress-based: docs, stage, deadline)
+    readiness = compute_readiness(ctx)
+
     # escalation
-    escalation = compute_escalation(rule_results)
+    escalation = compute_escalation(rule_results, stage=ctx.deal.current_stage)
 
     # audit trail
     audit = build_audit_trail(ctx, rule_results, llm_results, score, level)
@@ -90,6 +90,7 @@ def analyze_deal(deal_id: str, force_fallback: bool = False):
         "readiness_score": readiness["readiness_score"],
         "readiness_status": readiness.get("readiness_status", "unknown"),
         "readiness_reasons": readiness["readiness_reasons"],
+        "readiness_breakdown": readiness.get("readiness_breakdown"),
 
         # explainability
         "rule_issues": rule_results,
@@ -104,6 +105,7 @@ def analyze_deal(deal_id: str, force_fallback: bool = False):
         "escalation": escalation,
 
         # metadata
+        "priority": ctx.deal.priority if hasattr(ctx.deal, "priority") else None,
         "source": llm_results.get("source", "unknown"),
         "error": llm_results.get("error"),
 

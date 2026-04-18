@@ -15,7 +15,8 @@ class DealContext:
         documents: List[Document],
         communications: List[Communication],
         notes: List[Note],
-        workflow_template: Optional[WorkflowTemplate]
+        workflow_template: Optional[WorkflowTemplate],
+        all_workflow_templates: Optional[List[WorkflowTemplate]] = None,
     ):
         self.deal = deal
         self.buyer = buyer
@@ -25,3 +26,4 @@ class DealContext:
         self.communications = communications
         self.notes = notes
         self.workflow_template = workflow_template
+        self.all_workflow_templates = all_workflow_templates or []

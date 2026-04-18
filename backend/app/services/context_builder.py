@@ -30,5 +30,6 @@ class DealContextBuilder:
             documents=documents,
             communications=communications,
             notes=notes,
-            workflow_template=workflow_template
+            workflow_template=workflow_template,
+            all_workflow_templates=self.store.workflow_templates,
         )

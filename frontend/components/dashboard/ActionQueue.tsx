@@ -111,6 +111,7 @@ export default function ActionQueue({ data, onDealClick }: { data: ActionItem[];
               <th className="text-left px-4 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Deal</th>
               <th className="text-left px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Company</th>
               <th className="text-left px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Stage</th>
+              <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Priority</th>
               <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Status</th>
               <th className="text-center px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Score</th>
               <th className="text-left px-3 py-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wide">Main Blocker</th>
@@ -129,6 +130,11 @@ export default function ActionQueue({ data, onDealClick }: { data: ActionItem[];
                 <td className="px-4 py-2 font-mono text-xs text-blue-600 underline">{d.deal_id}</td>
                 <td className="px-3 py-2 font-medium text-slate-800">{d.company_name}</td>
                 <td className="px-3 py-2 text-slate-600 capitalize">{d.current_stage.replace(/_/g, " ")}</td>
+                <td className="px-3 py-2 text-center">
+                  <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${PRIORITY_COLORS[d.priority] || "bg-slate-100 text-slate-500"}`}>
+                    {d.priority || "--"}
+                  </span>
+                </td>
                 <td className="px-3 py-2 text-center">
                   <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${STATUS_COLORS[d.readiness_status] || "bg-slate-100 text-slate-600"}`}>
                     {d.readiness_status.replace(/_/g, " ")}
@@ -177,7 +183,7 @@ export default function ActionQueue({ data, onDealClick }: { data: ActionItem[];
             ))}
             {filtered.length === 0 && (
               <tr>
-                <td colSpan={9} className="px-4 py-8 text-center text-sm text-slate-400">
+                <td colSpan={10} className="px-4 py-8 text-center text-sm text-slate-400">
                   No deals match the selected filters
                 </td>
               </tr>
