@@ -60,6 +60,13 @@ function BarRow({
   );
 }
 
+function getDecisionHint(readiness: number, risk: number) {
+  if (readiness >= 70 && risk < 40) return "Ready to close";
+  if (readiness >= 70 && risk >= 40) return "⚠ Fix issues before close";
+  if (readiness < 70 && risk < 40) return "Normal progress";
+  return "Troubled deal";
+}
+
 export default function ReadinessCard({ data }: { data: DealAnalysis }) {
   const status = data.readiness_status || "unknown";
   const badgeCls = STATUS_BADGE[status] ?? STATUS_BADGE.blocked;
@@ -67,6 +74,8 @@ export default function ReadinessCard({ data }: { data: DealAnalysis }) {
   const riskBadge = RISK_BADGE[data.risk_level] ?? "bg-slate-100 text-slate-600 border-slate-200";
   const bd = data.readiness_breakdown;
   const riskFactors = getRiskFactors(data);
+
+  const decisionHint = getDecisionHint(data.readiness_score ?? 0, data.risk_score ?? 0);
 
   return (
     <Card>
@@ -87,8 +96,9 @@ export default function ReadinessCard({ data }: { data: DealAnalysis }) {
       <CardContent>
         <div className="grid grid-cols-2 gap-6">
 
-          {/* ── Left: score bars ── */}
+          {/* LEFT */}
           <div className="space-y-4">
+
             {/* Readiness */}
             <div className="space-y-2.5">
               <BarRow
@@ -97,8 +107,8 @@ export default function ReadinessCard({ data }: { data: DealAnalysis }) {
                 max={100}
                 barColor="bg-blue-500"
               />
-              <p className="text-[10px] text-slate-400 leading-snug">
-                Progress toward close: docs · stage · deadline
+              <p className="text-[11px] text-slate-500 leading-snug">
+                How far the deal has progressed toward close (docs · stage · deadline)
               </p>
             </div>
 
@@ -112,15 +122,21 @@ export default function ReadinessCard({ data }: { data: DealAnalysis }) {
                 max={100}
                 barColor={riskBar}
               />
-              <p className="text-[10px] text-slate-400 leading-snug">
-                Compliance violations: higher = more dangerous
+              <p className="text-[11px] text-slate-500 leading-snug">
+                What issues remain unresolved (compliance, documents, workflow)
               </p>
+            </div>
+
+            {/* Decision hint（加分点，但不突兀） */}
+            <div className="text-xs text-slate-600 pt-2">
+              → {decisionHint}
             </div>
           </div>
 
-          {/* ── Right: breakdowns ── */}
+          {/* RIGHT */}
           <div className="space-y-4">
-            {/* Readiness breakdown */}
+
+            {/* Readiness Breakdown */}
             <div>
               <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wide mb-1.5">
                 Readiness Breakdown
@@ -150,7 +166,7 @@ export default function ReadinessCard({ data }: { data: DealAnalysis }) {
 
             <div className="border-t border-slate-100" />
 
-            {/* Risk breakdown */}
+            {/* Risk Factors */}
             <div>
               <div className="flex items-baseline justify-between mb-1.5">
                 <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wide">
@@ -173,6 +189,7 @@ export default function ReadinessCard({ data }: { data: DealAnalysis }) {
                 <p className="text-xs text-green-600">No violations</p>
               )}
             </div>
+
           </div>
 
         </div>

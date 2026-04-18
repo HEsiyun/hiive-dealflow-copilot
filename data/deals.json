@@ -99,7 +99,7 @@
     "share_count": 2000,
     "price_per_share": 110.64,
     "current_stage": "closed",
-    "priority": "high",
+    "priority": "medium",
     "created_at": "2026-04-08T14:15:00",
     "last_stage_change_at": "2026-04-13T21:15:00",
     "deadline_at": "2026-04-16T21:15:00",
