@@ -1,12 +1,25 @@
 # Hiive Dealflow Copilot
+![AI Copilot](https://img.shields.io/badge/AI%20Copilot-gray)
+![Rules + LLM](https://img.shields.io/badge/Rules%20%2B%20LLM-green)
 
+![LLM](https://img.shields.io/badge/LLM-blue)
+![GPT-4o-mini](https://img.shields.io/badge/GPT--4o--mini-blue)
+
+![Backend](https://img.shields.io/badge/Backend-orange)
+![FastAPI](https://img.shields.io/badge/FastAPI-orange)
+
+![Frontend](https://img.shields.io/badge/Frontend-purple)
+![Next.js%20%2B%20React](https://img.shields.io/badge/Next.js%20%2B%20React-purple)
+
+![Status](https://img.shields.io/badge/Status-brightgreen)
+![Takehome Project](https://img.shields.io/badge/Hiive%20AI%20Builder-brightgreen)
 > An AI copilot for transaction operations that surfaces hidden risks, missing steps, and next-best actions across the deal pipeline.
 
 ---
 
 ## 📊 Demo
 
-👉 **[Watch Demo Video]([YOUR_YOUTUBE_LINK_HERE](https://youtu.be/Yi-BocTgGMI))**  
+👉 **[Watch Demo Video](https://youtu.be/Yi-BocTgGMI)**  
 *(The system is not deployed publicly; this video demonstrates the full workflow.)*
 
 ---
@@ -135,21 +148,17 @@ Drills deeper into the same deal:
 
 ## ▶️ Run Locally
 
-### 1. Backend setup
+### Backend (Python)
 
 ```bash
-# create Python environment
 conda env create -f backend/environment.yml
 conda activate hiive-copilot
 
-# start backend (port 8000)
 cd backend
 uvicorn app.main:app --reload
 ```
 
-### 2. Frontend setup
-
-Open a new terminal:
+### Frontend (Node.js)
 
 ```bash
 cd frontend
@@ -157,13 +166,12 @@ npm install
 npm run dev
 ```
 
-### 3. Open the app
+> The frontend uses a separate Node.js environment. All required packages are defined in `package.json` and installed via `npm install`.
 
-- Frontend: `http://localhost:3000`
-- Backend docs: `http://localhost:8000/docs`
+### Access
 
-> Note: the backend and frontend have separate dependency environments.  
-> The Conda environment only covers Python/backend dependencies; frontend packages must be installed with `npm install`.
+- App: http://localhost:3000  
+- API docs: http://localhost:8000/docs
 ---
 
 ## 📌 Notes
