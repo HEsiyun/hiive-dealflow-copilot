@@ -1,100 +1,173 @@
 # Hiive Dealflow Copilot
 
-A **production-ready AI copilot for secondary market deal operations**. It layers rule-based compliance checks, LLM-powered risk analysis, and progress-based readiness scoring into a unified pipeline — surfacing what needs attention, in what order, and why.
+> An AI copilot for transaction operations that surfaces hidden risks, missing steps, and next-best actions across the deal pipeline.
 
-## Core Architecture
+---
 
-Analysis runs through four sequential layers:
+## 📊 Demo
 
-1. **Rule Engine** — Validates KYC status, accreditation, document completeness, cross-document field consistency, SLA adherence, and stage-readiness conflicts
-2. **LLM Analysis** — Sends structured deal context and rule findings to GPT-4o-mini for blockers, risk summary, and recommended next action
-3. **Dual Scoring** — Combines rule signals and LLM output into two independent scores: risk (violation severity) and readiness (deal progress toward close)
-4. **Audit Trail** — Records evidence, decision trace, and communication signals for explainability
+👉 **[Watch Demo Video]([YOUR_YOUTUBE_LINK_HERE](https://youtu.be/Yi-BocTgGMI))**  
+*(The system is not deployed publicly; this video demonstrates the full workflow.)*
 
-## Key Capabilities
+---
 
-The system handles a range of deal operations scenarios:
+## 🧠 Problem
 
-- **False Readiness Detection**: "This deal reached settlement but buyer KYC is incomplete and three documents have conflicting share counts"
-- **Document Inconsistency Analysis**: "The subscription agreement shows 2100 shares, the draft shows 1800 — majority value across documents is 2000"
-- **Pipeline Prioritization**: Ranks deals by readiness status (blocked → at risk → ready), priority, and score for the action queue
-- **Escalation Routing**: Flags cross-document mismatches to legal; suppresses alerts for closed deals
-- **Operational Email Generation**: Drafts client-facing or internal follow-up emails referencing specific detected issues, counterparty names, and suggested next actions
+Deal execution at Hiive is fragmented across:
 
-## Scoring Systems
+- documents  
+- communications  
+- workflow systems  
 
-**Risk Score (0–100)** measures compliance violation severity:
+As a result, teams often move deals forward without full visibility into:
 
-| Signal | Points |
-|---|---|
-| Missing required documents | +20 |
-| SLA breach | +20 |
-| Cross-document field conflict | +15 |
-| Document vs. deal record mismatch | +15 |
-| Stage conflict (critical gap but deal advanced) | +15 |
-| KYC incomplete | +10 |
-| Accreditation not verified | +10 |
-| LLM-identified blockers | +10 each |
+- missing documents  
+- unresolved compliance issues  
+- cross-document inconsistencies  
 
-**Readiness Score (0–100)** measures deal progress toward close:
+This leads to delays, rework, and potential regulatory risk—especially in a high-volume, regulated environment.
 
-| Component | Max Points |
-|---|---|
-| Document completion (submitted / required for stage) | 50 |
-| Stage progression (intake → closed pipeline position) | 30 |
-| Deadline buffer (time remaining as % of total duration) | 20 |
+---
 
-The two scores are intentionally independent: a deal can be high-readiness (near closing) and high-risk (critical violations unresolved) simultaneously — which is exactly the false-readiness case the system is designed to surface.
+## 🚀 What This Builds
 
-## Rule Checks
+A **Deal Pipeline Monitoring Copilot** for Transaction Services teams.
 
-Eight validation checks run on every deal:
+The system helps teams:
 
-1. Missing documents — compared against per-stage workflow template requirements; cumulative check for closed deals
-2. SLA breach — hours elapsed in current stage vs. template threshold
-3. Field mismatches — extracted document fields vs. deal record (share count, seller legal name)
-4. Cross-document consistency — groups documents by field value, identifies majority vs. outliers
-5. KYC status — buyer and seller independently checked
-6. Accreditation verification — both counterparties must be verified investors
-7. Stage readiness conflicts — late-stage deals (signature / settlement / closed) checked for unmet critical requirements
-8. Communication blockers — keyword detection across message threads (waiting, missing, issue, delay, consent, approval)
+- Monitor pipeline progress and operational health  
+- Detect hidden risks across documents, communications, and workflows  
+- Prioritize deals through an action queue  
+- Generate clear next actions and follow-ups  
 
-## Technical Stack
+---
 
-- **Backend**: FastAPI (Python 3.10), Pydantic, Uvicorn
-- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS v4, shadcn/ui
-- **LLM**: OpenAI GPT-4o-mini (analysis and email generation, with rule-based fallback)
-- **Data**: JSON flat files loaded into memory at startup
+## 🏗 Architecture
 
-## Running Locally
+![Architecture](./docs/architecture.svg)
+
+The system combines structured rule-based validation with LLM reasoning, unified through a deal-centric context layer.
+
+---
+
+## ⚙️ How It Works
+
+The system follows a multi-stage pipeline aligned with real-world deal operations:
+
+1. **Data Layer**  
+   Aggregates deals, counterparties, documents, communications, notes, and workflow templates into a unified **DealContext**
+
+2. **Analysis Layer**  
+   - Rule engine → deterministic validation (documents, KYC, SLA, consistency)  
+   - LLM → semantic reasoning over unstructured signals (blockers, summaries, next actions)
+
+3. **Scoring Layer**  
+   - **Risk Score** → measures unresolved issues and compliance exposure  
+   - **Readiness Score** → measures progress toward closing  
+
+4. **Action Layer**  
+   - Escalation routing  
+   - Recommended next actions  
+   - Email generation  
+
+---
+
+## ⭐ Key Features
+
+- Detects **false readiness** (deals that are advanced but still risky)  
+- Surfaces **cross-document inconsistencies** with clear evidence  
+- Prioritizes work via an **action queue**  
+- Provides **explainable audit trails**  
+- Generates **follow-up emails grounded in detected issues**  
+
+---
+
+## 📈 Product Views
+
+### Overview
+
+![Dashboard](./docs/dashboard.png)
+
+Shows overall pipeline health, including:
+- Overview
+- pipeline health signals (stage distribution, bottlenecks, SLA breaches)
+- action queue with risk, stage, and priority filters
+
+---
+
+### Deal Analysis - Overview
+
+![Pipeline & Queue](./docs/analysis1.png)
+
+Provides a high-level view of a single deal:
+- progress vs. risk (readiness vs. unresolved issues)  
+- key blockers and recommended next actions  
+- stage-level context and escalation signals  
+
+---
+
+### Deal Analysis
+
+![Deal Analysis](./docs/analysis2.png)
+
+Drills deeper into the same deal:
+- missing documents and field mismatches  
+- cross-document inconsistencies (majority vs. outliers)  
+- timeline, audit trail, and generated follow-up email  
+---
+
+## 🧩 Design Principles
+
+- **Rules + LLM (not LLM-only)** → ensures reliability and control  
+- **Explainability first** → every decision is backed by evidence  
+- **Progress ≠ Risk** → separates deal progression from unresolved issues  
+
+---
+
+## 🛠 Tech Stack
+
+- **Backend**: FastAPI (Python 3.10), Pydantic, Uvicorn  
+- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS v4, shadcn/ui  
+- **LLM**: OpenAI GPT-4o-mini (analysis and email generation, with fallback)  
+- **Data**: JSON flat files loaded in-memory  
+
+---
+
+## ▶️ Run Locally
+
+### 1. Backend setup
 
 ```bash
-# 1. Create environment
-conda env create -f env.yml
-conda activate hiive
+# create Python environment
+conda env create -f backend/environment.yml
+conda activate hiive-copilot
 
-# 2. Start backend (port 8000)
+# start backend (port 8000)
 cd backend
 uvicorn app.main:app --reload
-
-# 3. Start frontend (port 3000)
-cd frontend
-npm install && npm run dev
 ```
 
-API docs available at `http://localhost:8000/docs`.
+### 2. Frontend setup
 
-## API Reference
+Open a new terminal:
 
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `/deals` | List all deals |
-| POST | `/deals/{deal_id}/analyze` | Full analysis pipeline: rules → LLM → scoring → audit |
-| POST | `/generate-email` | Generate follow-up email (`mode`: client or internal) |
-| GET | `/dashboard/overview` | KPI summary across all deals |
-| GET | `/dashboard/pipeline` | Per-stage breakdown with SLA and readiness counts |
-| GET | `/dashboard/action-queue` | Filtered and sorted action queue |
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## Design Philosophy
+### 3. Open the app
 
-The system is explicit by design. Every risk signal has a named source — a specific document, a field value, a SLA timestamp. LLM output is layered on top of deterministic rules, not in place of them, so results are reproducible and auditable. The audit trail records not just what was flagged, but the evidence behind each flag — making it suitable for compliance-sensitive operations where explainability matters.
+- Frontend: `http://localhost:3000`
+- Backend docs: `http://localhost:8000/docs`
+
+> Note: the backend and frontend have separate dependency environments.  
+> The Conda environment only covers Python/backend dependencies; frontend packages must be installed with `npm install`.
+---
+
+## 📌 Notes
+
+- This project is designed as a functional prototype for a Transaction Services workflow  
+- The demo video showcases the full user flow, including dashboard navigation and deal-level analysis  
+- All outputs are explainable and traceable, supporting use in regulated operational environments  
