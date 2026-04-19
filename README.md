@@ -1,6 +1,7 @@
 # Hiive Dealflow Copilot
+
 ![AI Copilot](https://img.shields.io/badge/AI%20Copilot-gray)
-![Rules + LLM](https://img.shields.io/badge/Rules%20%2B%20LLM-green)
+![Rules + LLM](https://img.shields.io/badge/Rules%20%2B%20LLM-brightgreen)
 
 ![LLM](https://img.shields.io/badge/LLM-blue)
 ![GPT-4o-mini](https://img.shields.io/badge/GPT--4o--mini-blue)
@@ -9,10 +10,11 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-orange)
 
 ![Frontend](https://img.shields.io/badge/Frontend-purple)
-![Next.js%20%2B%20React](https://img.shields.io/badge/Next.js%20%2B%20React-purple)
+![Next.js + React](https://img.shields.io/badge/Next.js%20%2B%20React-purple)
 
 ![Status](https://img.shields.io/badge/Status-brightgreen)
-![Takehome Project](https://img.shields.io/badge/Hiive%20AI%20Builder-brightgreen)
+![Hiive AI Builder](https://img.shields.io/badge/Hiive%20AI%20Builder-brightgreen)
+
 > An AI copilot for transaction operations that surfaces hidden risks, missing steps, and next-best actions across the deal pipeline.
 
 ---
@@ -148,7 +150,7 @@ Drills deeper into the same deal:
 
 ## ▶️ Run Locally
 
-### Backend (Python)
+### 1. Backend (Python)
 
 ```bash
 conda env create -f backend/environment.yml
@@ -158,7 +160,7 @@ cd backend
 uvicorn app.main:app --reload
 ```
 
-### Frontend (Node.js)
+### 2. Frontend (Node.js)
 
 ```bash
 cd frontend
@@ -166,9 +168,36 @@ npm install
 npm run dev
 ```
 
-> The frontend uses a separate Node.js environment. All required packages are defined in `package.json` and installed via `npm install`.
+> The frontend uses a separate Node.js environment. All required packages are defined in `package.json`.
 
-### Access
+---
+
+### 🔑 Environment Variables
+
+This project uses OpenAI for LLM-based analysis (risk reasoning, summaries, and email generation).
+
+Set your API key before running:
+
+```bash
+export OPENAI_API_KEY=your_api_key_here
+```
+
+Alternatively, create a `.env` file in the `backend/` directory:
+
+```env
+OPENAI_API_KEY=your_api_key_here
+```
+
+---
+
+### ⚠️ Notes
+
+- The system includes a **rule-based fallback**, so core functionality still works without an API key
+- LLM features (summarization, blockers, email generation) require a valid key
+
+---
+
+### 3. Access
 
 - App: http://localhost:3000  
 - API docs: http://localhost:8000/docs
