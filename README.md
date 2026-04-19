@@ -2,16 +2,12 @@
 
 ![AI Copilot](https://img.shields.io/badge/AI%20Copilot-gray)
 ![Rules + LLM](https://img.shields.io/badge/Rules%20%2B%20LLM-brightgreen)
-
 ![LLM](https://img.shields.io/badge/LLM-blue)
 ![GPT-4o-mini](https://img.shields.io/badge/GPT--4o--mini-blue)
-
 ![Backend](https://img.shields.io/badge/Backend-orange)
 ![FastAPI](https://img.shields.io/badge/FastAPI-orange)
-
 ![Frontend](https://img.shields.io/badge/Frontend-purple)
 ![Next.js + React](https://img.shields.io/badge/Next.js%20%2B%20React-purple)
-
 ![Status](https://img.shields.io/badge/Status-brightgreen)
 ![Hiive AI Builder](https://img.shields.io/badge/Hiive%20AI%20Builder-brightgreen)
 
